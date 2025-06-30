@@ -117,41 +117,40 @@ const Home = ({ setCurrentPage }: HomeProps) => {
         </div>
       </div>
 
-      {/* Who Am I Section */}
+            {/* Who Am I Section */}
       <div className="bg-gradient-to-r from-soichu-50 to-cream-50 rounded-lg p-12 mb-20">
-    <div className="grid md:grid-cols-2 gap-12 items-center">
-  <div>
-    <h2 className="text-2xl font-geomanist font-ultralight text-gray-500 mb-6 geomanist-ultra-thin">
-      who am I?
-    </h2>
-    <p className="text-gray-500 font-light mb-6 leading-relaxed text-sm">
-      I'm a visionary creator shaping spaces since childhood. I turned a 1970s garage into vibrant parties, 
-      "asaltos" with disco lights and driving sound.
-    </p>
-    <p className="text-gray-500 font-light mb-6 leading-relaxed text-sm">
-      From events management and performing arts to being devoted to guiding others through intuitive 
-      channeling and transformative readings.
-    </p>
-    <button 
-      onClick={() => setCurrentPage('about')}
-      className="px-8 py-3 bg-soichu-600 text-white rounded-lg hover:bg-soichu-700 transition duration-200 font-light"
-    >
-      Read My Journey →
-    </button>
-  </div>
+        <div className="grid md:grid-cols-2 gap-12 items-center">
+          <div>
+            <h2 className="text-2xl font-geomanist font-ultralight text-gray-500 mb-6 geomanist-ultra-thin">
+              who am I?
+            </h2>
+            <p className="text-gray-500 font-light mb-6 leading-relaxed text-sm">
+              I'm a visionary creator shaping spaces since childhood. I turned a 1970s garage into vibrant parties, 
+              "asaltos" with disco lights and driving sound.
+            </p>
+            <p className="text-gray-500 font-light mb-6 leading-relaxed text-sm">
+              From events management and performing arts to being devoted to guiding others through intuitive 
+              channeling and transformative readings.
+            </p>
+            <button 
+              onClick={() => setCurrentPage('about')}
+              className="px-8 py-3 bg-soichu-600 text-white rounded-lg hover:bg-soichu-700 transition duration-200 font-light"
+            >
+              Read My Journey →
+            </button>
+          </div>
 
-  <div>
-    <img 
-      src={`${import.meta.env.BASE_URL}soichu-home-02.jpg`} 
-      alt="Soichu portrait surrounded by artworks"
-      className="w-full h-80 object-cover rounded-lg"
-    />
-  </div>
-</div>
-
+          <div>
+            <img 
+              src={`${import.meta.env.BASE_URL}soichu-home-02.jpg`} 
+              alt="Soichu portrait surrounded by artworks"
+              className="w-full h-80 object-cover rounded-lg"
+            />
+          </div>
         </div>
       </div>
 
+      {/* Call to Action */}
       <div className="text-center bg-white rounded-lg p-12 shadow-sm border border-gray-200">
         <h2 className="text-2xl font-geomanist font-ultralight text-gray-500 mb-4 geomanist-ultra-thin">
           Ready to Transform Your Space?
