@@ -10,7 +10,7 @@ const Header = () => {
           <div className="flex items-center space-x-4">
             <div className="relative">
               <img 
-                src="/logo solo cuadrado.png" 
+                src="/logo-solo-cuadrado.png" 
                 alt="Soichu Logo" 
                 className="h-12 w-12 object-contain"
               />
