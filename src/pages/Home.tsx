@@ -5,9 +5,6 @@ interface HomeProps {
   setCurrentPage: (page: string) => void;
 }
 
-
-
-NO ME EXPLIQUES, NO PIERDAS TIEMPO NI ME LO HAGAS PERDER A MI, DAME LA SOLUCION Y LISTO, 
 const Home = ({ setCurrentPage }: HomeProps) => {
   return (
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
@@ -22,20 +19,20 @@ const Home = ({ setCurrentPage }: HomeProps) => {
           />
           <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
         </div>
-        
+
         <h1 className="text-4xl md:text-5xl font-geomanist font-ultralight text-gray-500 mb-6 tracking-wide geomanist-ultra-thin">
           pure spiritual shapes ~
         </h1>
         <h2 className="text-2xl md:text-3xl font-geomanist font-ultralight text-gray-500 mb-8 tracking-wide geomanist-ultra-thin">
           art as a living presence
         </h2>
-        
+
         <p className="text-base md:text-lg text-gray-500 font-light mb-12 max-w-4xl mx-auto leading-relaxed">
           What began with visual creations crafted from sacred bark, today expands through living rituals and experiences, 
           where art, nature, and energy align to create transformative encounters. From profound ceremonies to interactive 
           artistic explorations, Soichu brings presence, connection, and meaning into spaces and lives.
         </p>
-        
+
         <div className="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-6">
           <button 
             onClick={() => setCurrentPage('experiences')}
@@ -70,7 +67,7 @@ const Home = ({ setCurrentPage }: HomeProps) => {
             <span className="text-gray-500 font-light text-sm">Healing through art and ritual</span>
           </div>
         </div>
-        
+
         <div className="relative">
           <div className="bg-gradient-to-br from-soichu-100 to-cream-100 rounded-lg p-8 h-full flex items-center justify-center">
             <div className="text-center">
