@@ -28,6 +28,7 @@
   .text-6xl {
     @apply text-5xl;
   }
+
   
   /* Adjust paragraph text for better readability */
   p {
@@ -43,4 +44,7 @@
   .secondary-text {
     @apply text-xs;
   }
+}
+img {
+  @apply rounded-lg;
 }
