@@ -12,11 +12,11 @@ const Home = ({ setCurrentPage }: HomeProps) => {
       <div className="text-center mb-20">
         {/* Banner Image */}
         <div className="mb-12 relative overflow-hidden rounded-lg">
-          <img 
-            src="/essence4.jpg" 
-            alt="Soichu Essence" 
-            className="w-full h-48 md:h-64 object-cover opacity-85"
-          />
+         <img 
+  src={`${import.meta.env.BASE_URL}essence4.jpg`} 
+  alt="Soichu Essence" 
+  className="w-full h-48 md:h-64 object-cover"
+/>
           <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
         </div>
 
