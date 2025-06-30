@@ -68,7 +68,7 @@ const Experiences = () => {
       <div className="grid lg:grid-cols-2 gap-16 mb-16">
         <div className="text-center">
           <img 
-            src={`${import.meta.env.BASE_URL}gatesExpo1.jpg`} 
+            src={`${import.meta.env.BASE_URL}gatesExpo1.webp`} 
             alt="Soichu Gates Installation" 
             className="w-full h-80 object-cover rounded-lg"
           />
