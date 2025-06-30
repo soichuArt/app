@@ -1,0 +1,46 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Global font size adjustments for better readability */
+@layer base {
+  /* Reduce default text sizes */
+  .text-xl {
+    @apply text-lg;
+  }
+  
+  .text-2xl {
+    @apply text-xl;
+  }
+  
+  .text-3xl {
+    @apply text-2xl;
+  }
+  
+  .text-4xl {
+    @apply text-3xl;
+  }
+  
+  .text-5xl {
+    @apply text-4xl;
+  }
+  
+  .text-6xl {
+    @apply text-5xl;
+  }
+  
+  /* Adjust paragraph text for better readability */
+  p {
+    @apply text-sm leading-relaxed;
+  }
+  
+  /* Smaller description text */
+  .description-text {
+    @apply text-sm leading-relaxed;
+  }
+  
+  /* Even smaller for secondary text */
+  .secondary-text {
+    @apply text-xs;
+  }
+}
