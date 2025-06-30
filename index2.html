@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Soichu ~ Art as a Living Presence</title>
+    
+    <!-- Preload Geomanist font to prevent flash -->
+    <link rel="preload" href="https://fonts.cdnfonts.com/css/geomanist" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="https://fonts.cdnfonts.com/css/geomanist"></noscript>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600&display=swap" rel="stylesheet">
+    
+    <style>
+      /* Critical CSS - load immediately to prevent flash */
+      @font-face {
+        font-family: 'Geomanist';
+        src: url('https://fonts.cdnfonts.com/s/geomanist/Geomanist-Thin.woff') format('woff');
+        font-weight: 100;
+        font-style: normal;
+        font-display: block; /* Prevent flash by blocking until font loads */
+      }
+      
+      @font-face {
+        font-family: 'Geomanist';
+        src: url('https://fonts.cdnfonts.com/s/geomanist/Geomanist-ExtraLight.woff') format('woff');
+        font-weight: 200;
+        font-style: normal;
+        font-display: block;
+      }
+      
+      @font-face {
+        font-family: 'Geomanist';
+        src: url('https://fonts.cdnfonts.com/s/geomanist/Geomanist-Light.woff') format('woff');
+        font-weight: 300;
+        font-style: normal;
+        font-display: block;
+      }
+      
+      /* Force Geomanist to load and stay loaded */
+      .geomanist-ultra-thin {
+        font-family: 'Geomanist', sans-serif !important;
+        font-weight: 100 !important;
+        font-style: normal !important;
+        letter-spacing: 0.05em;
+        text-rendering: optimizeLegibility;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        font-feature-settings: "kern" 1;
+      }
+      
+      /* Ensure font stays loaded */
+      html {
+        font-family: 'Geomanist', sans-serif;
+      }
+      
+      /* Prevent font swapping after load */
+      * {
+        font-synthesis: none;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
