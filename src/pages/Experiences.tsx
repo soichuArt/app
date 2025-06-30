@@ -124,13 +124,12 @@ const Experiences = () => {
         </div>
         <div className="text-center">
           <img 
-            src={`${import.meta.env.BASE_URL}essence.jpg`} 
+            src={`${import.meta.env.BASE_URL}essence2.jpg`} 
             alt="Project, Sanur, Bali. Space proposal mock-up" 
             className="w-full h-80 object-cover rounded-lg"
           />
           <p className="text-sm text-gray-400 font-light italic mt-4">
-            Project, Sanur, Bali. Space proposal mock-up.
-          </p>
+Gaia's eye. Bark on wall. Bonwurrung Country, Melbourne. Australia </p>
         </div>
       </div>
 
