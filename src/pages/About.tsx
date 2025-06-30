@@ -34,10 +34,10 @@ const About = ({ setCurrentPage }: AboutProps) => {
           
           <div className="lg:hidden mb-8">
             <img 
-              src="https://images.pexels.com/photos/3822622/pexels-photo-3822622.jpeg" 
-              alt="Fabian Soichu portrait" 
-              className="w-full h-80 object-cover rounded-lg"
-            />
+  src={`${import.meta.env.BASE_URL}FabianSoichu1.jpg`} 
+  alt="Soichu portrait by Giacomisnki" 
+/>
+
           </div>
 
           <p className="text-lg text-gray-500 font-light leading-relaxed">
@@ -53,11 +53,11 @@ const About = ({ setCurrentPage }: AboutProps) => {
         </div>
         
         <div className="hidden lg:block">
-          <img 
-            src="https://images.pexels.com/photos/3822622/pexels-photo-3822622.jpeg" 
-            alt="Fabian Soichu portrait" 
-            className="w-full h-full object-cover rounded-lg"
-          />
+        <img 
+  src={`${import.meta.env.BASE_URL}travel-verb.webp`} 
+  alt="soichu walking barefoot on the beach" 
+/>
+
         </div>
       </div>
 
