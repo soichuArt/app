@@ -52,11 +52,10 @@ const About = ({ setCurrentPage }: AboutProps) => {
         </div>
         
         <div className="hidden lg:block">
-        <img 
-  src={`${import.meta.env.BASE_URL}travel-verb.webp`} 
-  alt="soichu walking barefoot on the beach" 
+           <img 
+  src={`${import.meta.env.BASE_URL}FabianSoichu1.jpg`} 
+  alt="Soichu portrait by Giacomisnki" 
 />
-
         </div>
       </div>
 
@@ -73,11 +72,11 @@ const About = ({ setCurrentPage }: AboutProps) => {
 
         <div className="max-w-4xl mx-auto">
           <div className="mb-8">
-            <img 
-              src="https://images.pexels.com/photos/1183992/pexels-photo-1183992.jpeg" 
-              alt="Travel artwork" 
-              className="w-full h-64 object-cover rounded-lg mb-4"
-            />
+                  <img 
+  src={`${import.meta.env.BASE_URL}travel-verb.webp`} 
+  alt="soichu walking barefoot on the beach" 
+/>
+
           </div>
 
           <div className="space-y-6">
