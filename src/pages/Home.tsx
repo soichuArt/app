@@ -138,6 +138,7 @@ const Home = ({ setCurrentPage }: HomeProps) => {
             >
               Read My Journey →
             </button>
+</div>
         <div>
         <img 
   src={`${import.meta.env.BASE_URL}soichu-home-02.jpg`} 
