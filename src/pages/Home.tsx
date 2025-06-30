@@ -1,5 +1,6 @@
 import React from 'react';
 import { Heart, ArrowRight, Star, Moon, Sun, Sparkles, Compass, BookOpen, Crown } from 'lucide-react';
+import essence4 from '../assets/essence4.jpg'; // Imagen importada correctamente
 
 interface HomeProps {
   setCurrentPage: (page: string) => void;
@@ -13,7 +14,7 @@ const Home = ({ setCurrentPage }: HomeProps) => {
         {/* Banner Image */}
         <div className="mb-12 relative overflow-hidden rounded-lg">
           <img 
-            src="/essence4.jpg" 
+            src={essence4} 
             alt="Soichu Essence" 
             className="w-full h-48 md:h-64 object-cover opacity-85"
           />
