@@ -150,7 +150,6 @@ const Home = ({ setCurrentPage }: HomeProps) => {
         </div>
       </div>
 
-      {/* Call to Action */}
       <div className="text-center bg-white rounded-lg p-12 shadow-sm border border-gray-200">
         <h2 className="text-2xl font-geomanist font-ultralight text-gray-500 mb-4 geomanist-ultra-thin">
           Ready to Transform Your Space?
