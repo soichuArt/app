@@ -19,17 +19,15 @@ const Experiences = () => {
       </div>
 
       {/* Featured Image */}
-      <div className="mb-16">
-        <div className="text-center">
-          <img 
-            src="https://images.pexels.com/photos/3822622/pexels-photo-3822622.jpeg" 
-            alt="The Tribe ~ Latam~Spain Entrepreneurs Meeting" 
-            className="w-full max-w-4xl h-64 md:h-96 object-cover rounded-lg mx-auto"
-          />
-          <p className="text-sm text-gray-400 font-light italic mt-4">
-            Latam~Spain Entrepreneurs Meeting. Bali, October 2024.
-          </p>
-        </div>
+      <div className="mb-16 text-center">
+        <img 
+          src={`${import.meta.env.BASE_URL}thetribe5.webp`} 
+          alt="The Tribe ~ Latam~Spain Entrepreneurs Meeting" 
+          className="w-full max-w-4xl h-64 md:h-96 object-cover rounded-lg mx-auto"
+        />
+        <p className="text-sm text-gray-400 font-light italic mt-4">
+          Latam~Spain Entrepreneurs Meeting. Bali, October 2024.
+        </p>
       </div>
 
       {/* The Tribe Experience */}
@@ -50,11 +48,10 @@ const Experiences = () => {
             Explore Formats & Availability
           </button>
         </div>
-        
-        <div>
+        <div className="text-center">
           <img 
-            src="https://images.pexels.com/photos/1183992/pexels-photo-1183992.jpeg" 
-            alt="Co-creation process" 
+            src={`${import.meta.env.BASE_URL}thetribe4.webp`} 
+            alt="Co-creation process at Tetiana's Birthday" 
             className="w-full h-80 object-cover rounded-lg"
           />
           <p className="text-sm text-gray-400 font-light italic mt-4">
@@ -69,9 +66,9 @@ const Experiences = () => {
 
       {/* Soichu Gates */}
       <div className="grid lg:grid-cols-2 gap-16 mb-16">
-        <div>
+        <div className="text-center">
           <img 
-            src="https://images.pexels.com/photos/6980523/pexels-photo-6980523.jpeg" 
+            src={`${import.meta.env.BASE_URL}gatesExpo1.jpg`} 
             alt="Soichu Gates Installation" 
             className="w-full h-80 object-cover rounded-lg"
           />
@@ -79,7 +76,6 @@ const Experiences = () => {
             Soichu Gates, now available for installations and private events. Setup mockup.
           </p>
         </div>
-        
         <div className="space-y-6">
           <h2 className="text-3xl font-geomanist font-ultralight text-gray-500 geomanist-ultra-thin">
             soichu gates: mirrors as portals
@@ -126,10 +122,9 @@ const Experiences = () => {
             Explore Ambiences
           </button>
         </div>
-        
-        <div>
+        <div className="text-center">
           <img 
-            src="/essence4.jpg" 
+            src={`${import.meta.env.BASE_URL}essence.jpg`} 
             alt="Project, Sanur, Bali. Space proposal mock-up" 
             className="w-full h-80 object-cover rounded-lg"
           />
@@ -145,9 +140,9 @@ const Experiences = () => {
 
       {/* Spiritual & Transformational */}
       <div className="grid lg:grid-cols-2 gap-16 mb-16">
-        <div>
+        <div className="text-center">
           <img 
-            src="https://images.pexels.com/photos/1183986/pexels-photo-1183986.jpeg" 
+            src={`${import.meta.env.BASE_URL}workshop1.webp`} 
             alt="Workshop at Pangaea Festival" 
             className="w-full h-80 object-cover rounded-lg"
           />
@@ -155,7 +150,6 @@ const Experiences = () => {
             Pangaea Festival. Workshop. Ubud, March 2025
           </p>
         </div>
-        
         <div className="space-y-6">
           <h2 className="text-3xl font-geomanist font-ultralight text-gray-500 geomanist-ultra-thin">
             spiritual and transformational
@@ -186,7 +180,6 @@ const Experiences = () => {
             through collaborative bark art projects.
           </p>
         </div>
-
         <div className="bg-white rounded-lg p-8 shadow-sm border border-gray-200 hover:shadow-md transition duration-200">
           <div className="flex items-center space-x-3 mb-4">
             <Eye className="h-8 w-8 text-soichu-500" />
@@ -199,7 +192,6 @@ const Experiences = () => {
             challenging conventional reality.
           </p>
         </div>
-
         <div className="bg-white rounded-lg p-8 shadow-sm border border-gray-200 hover:shadow-md transition duration-200">
           <div className="flex items-center space-x-3 mb-4">
             <Heart className="h-8 w-8 text-soichu-500" />
