@@ -9,11 +9,11 @@ const Header = () => {
         <div className="flex items-center justify-between h-20">
           <div className="flex items-center space-x-4">
             <div className="relative">
-              <img 
-                src="/logo-solo-cuadrado.png" 
-                alt="Soichu Logo" 
-                className="h-12 w-12 object-contain"
-              />
+             <img 
+  src={`${import.meta.env.BASE_URL}logo-solo-cuadrado.png`} 
+  alt="Soichu Logo" 
+  className="h-12 w-12 object-contain"
+/>
             </div>
             <div>
               <h1 className="text-2xl font-sans font-thin text-gray-500 tracking-wide">SOICHU</h1>
