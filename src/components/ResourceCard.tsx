@@ -1,6 +1,5 @@
 import React from "react";
 
-// Example data for each section
 const pdfs = [
   { title: "Artistry Guide", url: "/pdfs/artistry-guide.pdf" },
   { title: "Mindful Living", url: "/pdfs/mindful-living.pdf" },
