@@ -11,17 +11,13 @@ import ResourceCard from '../components/ResourceCard';
 import SoichuLogo from '../components/SoichuLogo';
 import SectionTitle from '../components/SectionTitle';
 
-// Resource cards data
 const resources = [
   {
     title: 'Guided Meditations',
     description: 'Listen to free audio & video meditations.',
     icon: Headphones,
     onClick: setCurrentPage =>
-      window.open(
-        'https://open.spotify.com/show/5Uv5Q2toxlK3b0MJ6i5FYz?si=d265ee45842f4972',
-        '_blank'
-      ),
+      window.open('https://open.spotify.com/show/5Uv5Q2toxlK3b0MJ6i5FYz?si=d265ee45842f4972', '_blank'),
     cta: 'Listen',
   },
   {
@@ -29,10 +25,7 @@ const resources = [
     description: 'Curated music for rituals and daily uplift.',
     icon: Zap,
     onClick: setCurrentPage =>
-      window.open(
-        'https://open.spotify.com/user/31phqpxk7z3wucg3lpzjv6f3e5c4?si=29e6e8c2e90b4c2c',
-        '_blank'
-      ),
+      window.open('https://open.spotify.com/user/31phqpxk7z3wucg3lpzjv6f3e5c4?si=29e6e8c2e90b4c2c', '_blank'),
     cta: 'Play',
   },
   {
@@ -59,31 +52,17 @@ const resources = [
   },
 ];
 
-// Inline calendar icon as component
 function CalendarIcon(props) {
   return (
     <svg {...props} viewBox="0 0 24 24" fill="none">
-      <rect
-        x="3"
-        y="4"
-        width="18"
-        height="18"
-        rx="4"
-        stroke="#745C44"
-        strokeWidth="2"
-      />
-      <path
-        d="M16 2v4M8 2v4M3 10h18"
-        stroke="#745C44"
-        strokeWidth="2"
-      />
+      <rect x="3" y="4" width="18" height="18" rx="4" stroke="#745C44" strokeWidth="2" />
+      <path d="M16 2v4M8 2v4M3 10h18" stroke="#745C44" strokeWidth="2" />
     </svg>
   );
 }
 
 const Home = ({ setCurrentPage }) => (
   <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 font-geomanist text-gray-500">
-    {/* Hero Banner */}
     <div className="text-center mb-16 relative">
       <img
         src={`${import.meta.env.BASE_URL}essence4.jpg`}
@@ -91,10 +70,7 @@ const Home = ({ setCurrentPage }) => (
         className="w-full h-48 md:h-64 object-cover mx-auto mb-8 rounded-lg shadow"
         style={{ objectPosition: 'center top', maxWidth: '900px' }}
       />
-      <h1
-        className="text-5xl font-ultralight tracking-wide geomanist-ultra-thin mb-2 text-soichu-600"
-        style={{ textTransform: 'lowercase' }}
-      >
+      <h1 className="text-5xl font-ultralight tracking-wide geomanist-ultra-thin mb-2 text-soichu-600" style={{ textTransform: 'lowercase' }}>
         art as a living presence
       </h1>
       <h2 className="text-2xl md:text-3xl geomanist-ultra-thin mb-6">
@@ -114,12 +90,10 @@ const Home = ({ setCurrentPage }) => (
         collective wisdom, and living rituals.
       </p>
     </div>
-
-    {/* Featured Free Resources */}
     <section className="mb-20">
       <SectionTitle>Featured Free Resources</SectionTitle>
       <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-8 mx-auto max-w-4xl">
-        {resources.map((res, idx) => (
+        {resources.map((res) => (
           <ResourceCard
             key={res.title}
             title={res.title}
@@ -131,8 +105,6 @@ const Home = ({ setCurrentPage }) => (
         ))}
       </div>
     </section>
-
-    {/* Soichu's Card (Interactive Element) */}
     <section className="mb-20 text-center">
       <SectionTitle>
         Soichu's Card <span className="ml-1" role="img" aria-label="wing">🪽</span>
@@ -147,8 +119,6 @@ const Home = ({ setCurrentPage }) => (
         Draw a Card
       </button>
     </section>
-
-    {/* About / Vision Preview (centered) */}
     <section className="mb-20">
       <div className="flex flex-col items-center text-center">
         <SectionTitle>About Soichu & Vision</SectionTitle>
@@ -165,8 +135,6 @@ const Home = ({ setCurrentPage }) => (
         </button>
       </div>
     </section>
-
-    {/* Upcoming Events & Rituals */}
     <section className="mb-20">
       <SectionTitle>Upcoming Events & Rituals</SectionTitle>
       <div className="text-center">
@@ -182,8 +150,6 @@ const Home = ({ setCurrentPage }) => (
         </p>
       </div>
     </section>
-
-    {/* Shop/Offerings Preview */}
     <section className="mb-16">
       <SectionTitle>Shop & Offerings</SectionTitle>
       <div className="text-center">
@@ -198,8 +164,6 @@ const Home = ({ setCurrentPage }) => (
         </p>
       </div>
     </section>
-
-    {/* Footer Soichu Logo */}
     <footer className="text-center text-sm text-gray-400 mt-16 pb-6">
       <SoichuLogo />
       © {new Date().getFullYear()} Soichu · Art as a Living Presence
