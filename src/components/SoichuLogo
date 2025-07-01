@@ -1,10 +1,10 @@
-import React from 'react';
+import React from "react";
 
 type SoichuLogoProps = {
   className?: string;
 };
 
-const SoichuLogo: React.FC<SoichuLogoProps> = ({ className = '' }) => (
+const SoichuLogo: React.FC<SoichuLogoProps> = ({ className = "" }) => (
   <img
     src={`${import.meta.env.BASE_URL}logoSOICHU-01.jpg`}
     alt="Soichu Logo"
