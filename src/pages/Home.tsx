@@ -89,9 +89,9 @@ const Home = ({ setCurrentPage }) => (
       <div className="flex justify-center mb-4">
 
 <button 
-  onClick={() => setCurrentPage('community')}>
-    className="px-8 py-3 bg-soichu-600 text-white rounded-lg shadow-lg font-light flex items-center space-x-2 hover:bg-soichu-700 transition"
-      >
+  onClick={() => setCurrentPage('community')}
+  className="px-8 py-3 bg-soichu-600 text-white rounded-lg shadow-lg font-light flex items-center space-x-2 hover:bg-soichu-700 transition"
+>
           <Users className="h-5 w-5" />
           <span>Join Free Community</span>
         </button>
