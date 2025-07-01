@@ -6,6 +6,8 @@ import {
   Youtube,
   Zap,
   Sparkles,
+  Mic,
+  Camera,
 } from 'lucide-react';
 import ResourceCard from '../components/ResourceCard';
 import SectionTitle from '../components/SectionTitle';
@@ -39,20 +41,21 @@ const resources = [
     onClick: undefined,
     cta: 'Explore',
   },
- {
+  {
     title: 'Podcasts',
     description: 'Find coaches, artists, tools & books for your journey.',
-    icon: mic,
+    icon: Mic,
     onClick: undefined,
     cta: 'Explore',
   },  
-   {
+  {
     title: 'Movies',
     description: 'Find coaches, artists, tools & books for your journey.',
-    icon: camera,
+    icon: Camera,
     onClick: undefined,
     cta: 'Explore',
-  },    {
+  },
+  {
     title: 'Habit Tracker',
     description: 'Printable & digital templates for growth.',
     icon: Sparkles,
