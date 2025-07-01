@@ -98,7 +98,7 @@ const Home = ({ setCurrentPage }) => (
         className="text-2xl md:text-3xl geomanist-ultra-thin mb-6"
         style={{ textTransform: 'lowercase' }}
       >
-        welcome to the Pueblo community
+        welcome to Pueblo, Soichu's gathering.
       </h2>
       <div className="flex justify-center mb-4">
         <button
@@ -218,10 +218,10 @@ const Home = ({ setCurrentPage }) => (
     {/* Footer Soichu Logo */}
     <footer className="text-center text-sm text-gray-400 mt-16 pb-6">
       <img
-        src={`${import.meta.env.BASE_URL}logoSOICHU-01.jpg`}
-        alt="Soichu Logo"
-        className="mx-auto w-10 mb-2"
-      />
+  src={`${import.meta.env.BASE_URL}logoSOICHU-01.jpg`}
+  alt="Soichu Logo"
+  className="mx-auto w-20 mb-2"
+/>
       © {new Date().getFullYear()} Soichu · Art as a Living Presence
     </footer>
   </div>
