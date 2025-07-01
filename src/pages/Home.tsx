@@ -30,7 +30,7 @@ const resources = [
     icon: Zap,
     onClick: setCurrentPage =>
       window.open(
-       'https://open.spotify.com/playlist/38QevSWMRKeAlttapBiS1L',        
+       'https://open.spotify.com/playlist/62lz8cDvGdQsqHjA0XXxRu',        
        '_blank'
       ),
     cta: 'Play',
