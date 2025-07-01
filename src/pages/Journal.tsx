@@ -180,9 +180,9 @@ const Community = ({ setCurrentPage }: CommunityProps) => {
         Welcome to Soichu Pueblo* 
         </h1>
         <p className="text-lg text-gray-500 font-light max-w-3xl mx-auto leading-relaxed">
-      A safe place to be yourself. Pueblo — a country town, a gentle place where everyone knows each other, 
-          protects each other, and accepts each other. That’s the spirit I’m weaving into this space: a virtual Pueblo where you can simply arrive, as you are. Soichu Pueblo is a community of presence, creativity, and care. Rooted in truth, blossoming through connection. This is just the beginning — the heart of Soichu, now finding its first home. Feel free to share your life, your needs, your thoughts — whatever moves you. 
-          Thank you for being here. Bienvenid@s. Let’s grow togethe
+      A safe place to be yourself. <br/ >Pueblo — a country town, a gentle place where everyone knows each other, 
+          protects each other, and accepts each other. That’s the spirit I’m weaving into this space: a virtual Pueblo where you can simply arrive, as you are. <br/ >Soichu Pueblo is a community of presence, creativity, and care. Rooted in truth, blossoming through connection. <br/ >This is just the beginning — the heart of Soichu, now finding its first home. Feel free to share your life, your needs, your thoughts — whatever moves you. 
+          <br/ >Thank you for being here. <br/ >Bienvenid@s. Let’s grow together.
         </p>
       </div>
 
