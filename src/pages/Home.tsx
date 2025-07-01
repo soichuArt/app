@@ -109,7 +109,7 @@ const Home = ({ setCurrentPage }) => (
         </button>
       </div>
       <p className="max-w-2xl mx-auto text-lg font-light text-gray-500">
-        Connect, share, and grow with fellow seekers. Explore free resources,
+        Connect, share, and grow with fellow seekers.<br /> Explore free resources,
         collective wisdom, and living rituals.
       </p>
     </div>
