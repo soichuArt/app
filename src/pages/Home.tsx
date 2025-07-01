@@ -24,7 +24,7 @@ const resources = [
     cta: 'Listen',
   },
   {
-    title: 'Spiritual Playlists',
+    title: 'Stress-free Playlists',
     description: 'Curated music for rituals and daily uplift.',
     icon: Zap,
     onClick: setCurrentPage =>
@@ -50,7 +50,7 @@ const resources = [
     cta: 'Explore',
   },
   {
-    title: 'Habit Tracker (Free)',
+    title: 'Habit Tracker',
     description: 'Printable & digital templates for growth.',
     icon: Sparkles,
     onClick: setCurrentPage => setCurrentPage && setCurrentPage('library'),
