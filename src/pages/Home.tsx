@@ -8,26 +8,36 @@ import {
   Sparkles,
 } from 'lucide-react';
 
+// Resource cards data
 const resources = [
   {
     title: 'Guided Meditations',
     description: 'Listen to free audio & video meditations.',
     icon: Headphones,
-    onClick: setCurrentPage => window.open('https://open.spotify.com/show/5Uv5Q2toxlK3b0MJ6i5FYz?si=d265ee45842f4972', '_blank'),
+    onClick: setCurrentPage =>
+      window.open(
+        'https://open.spotify.com/show/5Uv5Q2toxlK3b0MJ6i5FYz?si=d265ee45842f4972',
+        '_blank'
+      ),
     cta: 'Listen',
   },
   {
     title: 'Spiritual Playlists',
     description: 'Curated music for rituals and daily uplift.',
     icon: Zap,
-    onClick: setCurrentPage => window.open('https://open.spotify.com/user/31phqpxk7z3wucg3lpzjv6f3e5c4?si=29e6e8c2e90b4c2c', '_blank'),
+    onClick: setCurrentPage =>
+      window.open(
+        'https://open.spotify.com/user/31phqpxk7z3wucg3lpzjv6f3e5c4?si=29e6e8c2e90b4c2c',
+        '_blank'
+      ),
     cta: 'Play',
   },
   {
     title: 'YouTube Channel',
     description: 'Art, rituals, creative processes & talks.',
     icon: Youtube,
-    onClick: setCurrentPage => window.open('https://www.youtube.com/@soichuart', '_blank'),
+    onClick: setCurrentPage =>
+      window.open('https://www.youtube.com/@soichuart', '_blank'),
     cta: 'Watch',
   },
   {
@@ -46,22 +56,48 @@ const resources = [
   },
 ];
 
+// Inline calendar icon as component
+function CalendarIcon(props) {
+  return (
+    <svg {...props} viewBox="0 0 24 24" fill="none">
+      <rect
+        x="3"
+        y="4"
+        width="18"
+        height="18"
+        rx="4"
+        stroke="#745C44"
+        strokeWidth="2"
+      />
+      <path
+        d="M16 2v4M8 2v4M3 10h18"
+        stroke="#745C44"
+        strokeWidth="2"
+      />
+    </svg>
+  );
+}
+
 const Home = ({ setCurrentPage }) => (
   <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 font-geomanist text-gray-500">
     {/* Hero Banner */}
     <div className="text-center mb-16 relative">
       <img
-        src="/essence4.jpg"
-        alt="Essence Banner"
-        className="mx-auto mb-8 h-48 md:h-64 w-full object-cover rounded-lg shadow"
+        src={`${import.meta.env.BASE_URL}essence4.jpg`}
+        alt="Soichu Essence"
+        className="w-full h-48 md:h-64 object-cover mx-auto mb-8 rounded-lg shadow"
         style={{ objectPosition: 'center top', maxWidth: '900px' }}
       />
-      <h1 className="text-5xl font-ultralight tracking-wide geomanist-ultra-thin mb-2 text-soichu-600"
-          style={{ textTransform: 'lowercase' }}>
+      <h1
+        className="text-5xl font-ultralight tracking-wide geomanist-ultra-thin mb-2 text-soichu-600"
+        style={{ textTransform: 'lowercase' }}
+      >
         art as a living presence
       </h1>
-      <h2 className="text-2xl md:text-3xl geomanist-ultra-thin mb-6"
-          style={{ textTransform: 'lowercase' }}>
+      <h2
+        className="text-2xl md:text-3xl geomanist-ultra-thin mb-6"
+        style={{ textTransform: 'lowercase' }}
+      >
         welcome to the Pueblo community
       </h2>
       <div className="flex justify-center mb-4">
@@ -74,7 +110,8 @@ const Home = ({ setCurrentPage }) => (
         </button>
       </div>
       <p className="max-w-2xl mx-auto text-lg font-light text-gray-500">
-        Connect, share, and grow with fellow seekers. Explore free resources, collective wisdom, and living rituals.
+        Connect, share, and grow with fellow seekers. Explore free resources,
+        collective wisdom, and living rituals.
       </p>
     </div>
 
@@ -154,7 +191,9 @@ const Home = ({ setCurrentPage }) => (
           <CalendarIcon className="h-5 w-5" />
           <span>View Calendar</span>
         </button>
-        <p className="mt-4 text-gray-400 text-sm">Participate in group rituals, workshops, and global meditations.</p>
+        <p className="mt-4 text-gray-400 text-sm">
+          Participate in group rituals, workshops, and global meditations.
+        </p>
       </div>
     </section>
 
@@ -170,21 +209,22 @@ const Home = ({ setCurrentPage }) => (
         >
           Visit Shop
         </button>
-        <p className="mt-4 text-gray-400 text-sm">Talismans, art, ceremonial tools, and more for your journey.</p>
+        <p className="mt-4 text-gray-400 text-sm">
+          Talismans, art, ceremonial tools, and more for your journey.
+        </p>
       </div>
     </section>
 
     {/* Footer Soichu Logo */}
     <footer className="text-center text-sm text-gray-400 mt-16 pb-6">
-      <img src="/logo.png" alt="Soichu Logo" className="mx-auto w-10 mb-2" />
+      <img
+        src={`${import.meta.env.BASE_URL}logoSOICHU-01.jpg`}
+        alt="Soichu Logo"
+        className="mx-auto w-10 mb-2"
+      />
       © {new Date().getFullYear()} Soichu · Art as a Living Presence
     </footer>
   </div>
 );
-
-// Inline temporary Calendar icon for button
-function CalendarIcon(props) {
-  return <svg {...props} viewBox="0 0 24 24" fill="none"><rect x="3" y="4" width="18" height="18" rx="4" stroke="#745C44" strokeWidth="2"/><path d="M16 2v4M8 2v4M3 10h18" stroke="#745C44" strokeWidth="2"/></svg>;
-}
 
 export default Home;
