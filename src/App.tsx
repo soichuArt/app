@@ -15,6 +15,7 @@ import Contact from './pages/Contact';
 import Essence from './pages/Essence';
 import Experiences from './pages/Experiences';
 import Meditations from './pages/Meditations';
+import PuebloBridge from './pages/PuebloBridge'; // <-- AÑADIDO AQUÍ
 
 function App() {
   const [currentPage, setCurrentPage] = useState('home');
@@ -47,6 +48,8 @@ function App() {
         return <Experiences setCurrentPage={setCurrentPage} />;
       case 'meditations':
         return <Meditations setCurrentPage={setCurrentPage} />;
+      case 'pueblo-bridge': // <-- AÑADIDO AQUÍ
+        return <PuebloBridge setCurrentPage={setCurrentPage} />;
       default:
         return <Home setCurrentPage={setCurrentPage} />;
     }
