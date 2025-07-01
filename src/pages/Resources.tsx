@@ -42,14 +42,14 @@ const resources = [
  {
     title: 'Podcasts',
     description: 'Find coaches, artists, tools & books for your journey.',
-    icon: micro,
+    icon: mic,
     onClick: undefined,
     cta: 'Explore',
   },  
    {
     title: 'Movies',
     description: 'Find coaches, artists, tools & books for your journey.',
-    icon: cam,
+    icon: camera,
     onClick: undefined,
     cta: 'Explore',
   },    {
