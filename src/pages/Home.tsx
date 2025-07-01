@@ -14,55 +14,48 @@ const resources = [
     title: 'Guided Meditations',
     description: 'Listen to free audio & video meditations.',
     icon: Headphones,
-    link: 'https://open.spotify.com/show/5Uv5Q2toxlK3b0MJ6i5FYz?si=d265ee45842f4972',
-    external: true,
+    onClick: setCurrentPage => window.open('https://open.spotify.com/show/5Uv5Q2toxlK3b0MJ6i5FYz?si=d265ee45842f4972', '_blank'),
     cta: 'Listen',
   },
   {
     title: 'Spiritual Playlists',
     description: 'Curated music for rituals and daily uplift.',
     icon: Zap,
-    link: 'https://open.spotify.com/user/31phqpxk7z3wucg3lpzjv6f3e5c4?si=29e6e8c2e90b4c2c',
-    external: true,
+    onClick: setCurrentPage => window.open('https://open.spotify.com/user/31phqpxk7z3wucg3lpzjv6f3e5c4?si=29e6e8c2e90b4c2c', '_blank'),
     cta: 'Play',
   },
   {
     title: 'YouTube Channel',
     description: 'Art, rituals, creative processes & talks.',
     icon: Youtube,
-    link: 'https://www.youtube.com/@soichuart',
-    external: true,
+    onClick: setCurrentPage => window.open('https://www.youtube.com/@soichuart', '_blank'),
     cta: 'Watch',
   },
   {
     title: 'Resource Directory',
     description: 'Find coaches, artists, tools & books.',
     icon: BookOpen,
-    link: '/resources',
-    external: false,
+    onClick: setCurrentPage => setCurrentPage && setCurrentPage('resources'),
     cta: 'Explore',
   },
   {
     title: 'Habit Tracker (Free)',
     description: 'Printable & digital templates for growth.',
     icon: Sparkles,
-    link: '/library',
-    external: false,
+    onClick: setCurrentPage => setCurrentPage && setCurrentPage('library'),
     cta: 'Download',
   },
 ];
 
 const Home = ({ setCurrentPage }) => (
   <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 font-geomanist text-gray-500">
-    {/* Hero & Community Call */}
-    <div className="text-center mb-16">
+    {/* Hero Banner */}
+    <div className="text-center mb-16 relative">
       <img
-        src="/logo.png"
-        alt="Soichu Logo"
-        className="mx-auto mb-4 h-24"
-        style={{
-          filter: 'drop-shadow(0 2px 12px #f1e9e1)',
-        }}
+        src="/essence4.jpg"
+        alt="Essence Banner"
+        className="mx-auto mb-8 h-48 md:h-64 w-full object-cover rounded-lg shadow"
+        style={{ objectPosition: 'center top' }}
       />
       <h1 className="text-5xl font-ultralight tracking-wide geomanist-ultra-thin mb-2 text-soichu-600">
         Art as a Living Presence
@@ -70,22 +63,13 @@ const Home = ({ setCurrentPage }) => (
       <h2 className="text-2xl md:text-3xl geomanist-ultra-thin mb-6">
         Welcome to the Pueblo Community
       </h2>
-      <div className="flex flex-col items-center gap-4 mb-4">
-        <button
-          onClick={() => setCurrentPage('community')}
-          className="px-8 py-3 bg-soichu-600 text-white rounded-lg shadow-lg font-light flex items-center space-x-2 hover:bg-soichu-700 transition"
-        >
-          <Users className="h-5 w-5" />
-          <span>Join Free Community</span>
-        </button>
-        <button
-          onClick={() => setCurrentPage('journal')}
-          className="px-8 py-3 border-2 border-soichu-400 text-soichu-600 rounded-lg hover:bg-soichu-50 transition duration-200 font-light flex items-center space-x-2"
-        >
-          <span>Visit Community Journal</span>
-          <ArrowRight className="h-5 w-5" />
-        </button>
-      </div>
+      <button
+        onClick={() => setCurrentPage('community')}
+        className="px-8 py-3 bg-soichu-600 text-white rounded-lg shadow-lg font-light flex items-center space-x-2 hover:bg-soichu-700 transition mb-4"
+      >
+        <Users className="h-5 w-5" />
+        <span>Join Free Community</span>
+      </button>
       <p className="max-w-2xl mx-auto text-lg font-light text-gray-500">
         Connect, share, and grow with fellow seekers. Explore free resources, collective wisdom, and living rituals.
       </p>
@@ -100,12 +84,11 @@ const Home = ({ setCurrentPage }) => (
         {resources.map((res, idx) => {
           const Icon = res.icon;
           return (
-            <a
+            <button
               key={res.title}
-              href={res.link}
-              target={res.external ? '_blank' : undefined}
-              rel={res.external ? 'noopener noreferrer' : undefined}
-              className="bg-white rounded-xl shadow p-6 flex flex-col items-center hover:shadow-lg transition group border border-soichu-100"
+              onClick={() => res.onClick(setCurrentPage)}
+              className="bg-white rounded-xl shadow p-6 flex flex-col items-center hover:shadow-lg transition group border border-soichu-100 cursor-pointer"
+              style={{ minHeight: 220 }}
             >
               <Icon className="h-10 w-10 mb-4 text-soichu-600 group-hover:text-soichu-700" />
               <h3 className="text-lg font-medium mb-1 text-soichu-700">{res.title}</h3>
@@ -113,49 +96,43 @@ const Home = ({ setCurrentPage }) => (
               <span className="mt-auto px-4 py-1 bg-soichu-50 text-soichu-700 rounded-full text-sm shadow group-hover:bg-soichu-100">
                 {res.cta}
               </span>
-            </a>
+            </button>
           );
         })}
       </div>
     </section>
 
-    {/* Interactive Element: Fortune Card (Placeholder) */}
+    {/* Soichu's Card (Interactive Element) */}
     <section className="mb-20 text-center">
-      <h2 className="text-2xl geomanist-ultra-thin mb-4">✨ Your Pueblo Card</h2>
-      <p className="mb-6 text-gray-500 font-light">Need inspiration or a gentle nudge? Click below to receive a message!</p>
-      {/* Replace below with your fortune/roulette component */}
+      <h2 className="text-2xl geomanist-ultra-thin mb-4">Soichu's Card</h2>
+      <p className="mb-6 text-gray-500 font-light">
+        Need inspiration or a gentle nudge? Click below to receive a message!
+      </p>
       <button
-        onClick={() => setCurrentPage('fortune')}
+        onClick={() => setCurrentPage && setCurrentPage('fortune')}
         className="px-8 py-3 bg-soichu-400 text-white rounded-lg shadow font-light hover:bg-soichu-500 transition"
       >
-        Draw a Card
+        Draw a Card <span className="ml-2" role="img" aria-label="wing">🪽</span>
       </button>
     </section>
 
-    {/* About / Vision Preview */}
+    {/* About / Vision Preview (no image) */}
     <section className="mb-20">
-      <div className="md:flex md:items-center md:gap-12">
-        <img
-          src="/essence4.jpg"
-          alt="Soichu Essence"
-          className="w-full md:w-1/3 h-48 md:h-64 object-cover rounded-lg shadow mb-8 md:mb-0"
-        />
-        <div>
-          <h2 className="text-2xl font-ultralight geomanist-ultra-thin mb-4">
-            About Soichu & Vision
-          </h2>
-          <p className="mb-3">
-            What began with visual creations from sacred bark now expands through living rituals and experiences, where art, nature, and energy align to create transformative encounters.
-            <br />
-            Our vision: Inspire a cultural paradigm shift towards a conscious and sustainable way of living—together.
-          </p>
-          <button
-            onClick={() => setCurrentPage('essence')}
-            className="text-soichu-600 hover:underline font-medium"
-          >
-            Read More
-          </button>
-        </div>
+      <div>
+        <h2 className="text-2xl font-ultralight geomanist-ultra-thin mb-4">
+          About Soichu & Vision
+        </h2>
+        <p className="mb-3">
+          What began with visual creations from sacred bark now expands through living rituals and experiences, where art, nature, and energy align to create transformative encounters.
+          <br />
+          Our vision: Inspire a cultural paradigm shift towards a conscious and sustainable way of living—together.
+        </p>
+        <button
+          onClick={() => setCurrentPage('essence')}
+          className="text-soichu-600 hover:underline font-medium"
+        >
+          Read More
+        </button>
       </div>
     </section>
 
@@ -166,7 +143,7 @@ const Home = ({ setCurrentPage }) => (
       </h2>
       <div className="text-center">
         <button
-          onClick={() => setCurrentPage('events')}
+          onClick={() => setCurrentPage && setCurrentPage('events')}
           className="px-8 py-3 bg-soichu-600 text-white rounded-lg shadow-lg font-light flex items-center space-x-2 mx-auto hover:bg-soichu-700 transition"
         >
           <CalendarIcon className="h-5 w-5" />
@@ -183,7 +160,7 @@ const Home = ({ setCurrentPage }) => (
       </h2>
       <div className="text-center">
         <button
-          onClick={() => setCurrentPage('shop')}
+          onClick={() => setCurrentPage && setCurrentPage('shop')}
           className="px-8 py-3 bg-soichu-400 text-white rounded-lg shadow font-light hover:bg-soichu-500 transition"
         >
           Visit Shop
@@ -192,7 +169,7 @@ const Home = ({ setCurrentPage }) => (
       </div>
     </section>
 
-    {/* Footer */}
+    {/* Footer Soichu Logo */}
     <footer className="text-center text-sm text-gray-400 mt-16 pb-6">
       <img src="/logo.png" alt="Soichu Logo" className="mx-auto w-10 mb-2" />
       © {new Date().getFullYear()} Soichu · Art as a Living Presence
