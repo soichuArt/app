@@ -1,7 +1,7 @@
 import React from "react";
 
 const ResourceCard = ({ title, description, icon: Icon, onClick, cta }) => (
-  <div className="bg-white rounded-lg shadow p-6 flex flex-col items-center text-center hover:shadow-md transition">
+  <div className="bg-white rounded-lg shadow p-6 flex flex-col items-center text-center hover:shadow-md transition h-full">
     <div className="mb-4">
       {Icon && <Icon className="w-10 h-10 text-soichu-600" />}
     </div>
@@ -10,7 +10,7 @@ const ResourceCard = ({ title, description, icon: Icon, onClick, cta }) => (
     {cta && (
       <button
         onClick={onClick}
-        className="px-4 py-2 bg-soichu-600 text-white rounded hover:bg-soichu-700 transition"
+        className="w-full min-h-[44px] px-6 py-2 mt-auto bg-soichu-600 text-white text-base font-medium rounded hover:bg-soichu-700 transition flex items-center justify-center"
       >
         {cta}
       </button>
