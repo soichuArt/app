@@ -96,7 +96,6 @@ const Home = ({ setCurrentPage }) => (
       </h1>
       <h2
         className="text-2xl md:text-3xl geomanist-ultra-thin mb-6"
-        style={{ textTransform: 'lowercase' }}
       >
         welcome to Pueblo, Soichu's gathering.
       </h2>
