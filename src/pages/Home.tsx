@@ -1,6 +1,5 @@
 import React from 'react';
 import {
-  ArrowRight,
   Users,
   BookOpen,
   Headphones,
@@ -55,21 +54,25 @@ const Home = ({ setCurrentPage }) => (
         src="/essence4.jpg"
         alt="Essence Banner"
         className="mx-auto mb-8 h-48 md:h-64 w-full object-cover rounded-lg shadow"
-        style={{ objectPosition: 'center top' }}
+        style={{ objectPosition: 'center top', maxWidth: '900px' }}
       />
-      <h1 className="text-5xl font-ultralight tracking-wide geomanist-ultra-thin mb-2 text-soichu-600">
-        Art as a Living Presence
+      <h1 className="text-5xl font-ultralight tracking-wide geomanist-ultra-thin mb-2 text-soichu-600"
+          style={{ textTransform: 'lowercase' }}>
+        art as a living presence
       </h1>
-      <h2 className="text-2xl md:text-3xl geomanist-ultra-thin mb-6">
-        Welcome to the Pueblo Community
+      <h2 className="text-2xl md:text-3xl geomanist-ultra-thin mb-6"
+          style={{ textTransform: 'lowercase' }}>
+        welcome to the Pueblo community
       </h2>
-      <button
-        onClick={() => setCurrentPage('community')}
-        className="px-8 py-3 bg-soichu-600 text-white rounded-lg shadow-lg font-light flex items-center space-x-2 hover:bg-soichu-700 transition mb-4"
-      >
-        <Users className="h-5 w-5" />
-        <span>Join Free Community</span>
-      </button>
+      <div className="flex justify-center mb-4">
+        <button
+          onClick={() => setCurrentPage('community')}
+          className="px-8 py-3 bg-soichu-600 text-white rounded-lg shadow-lg font-light flex items-center space-x-2 hover:bg-soichu-700 transition"
+        >
+          <Users className="h-5 w-5" />
+          <span>Join Free Community</span>
+        </button>
+      </div>
       <p className="max-w-2xl mx-auto text-lg font-light text-gray-500">
         Connect, share, and grow with fellow seekers. Explore free resources, collective wisdom, and living rituals.
       </p>
@@ -104,7 +107,9 @@ const Home = ({ setCurrentPage }) => (
 
     {/* Soichu's Card (Interactive Element) */}
     <section className="mb-20 text-center">
-      <h2 className="text-2xl geomanist-ultra-thin mb-4">Soichu's Card</h2>
+      <h2 className="text-2xl geomanist-ultra-thin mb-4">
+        Soichu's Card <span className="ml-1" role="img" aria-label="wing">🪽</span>
+      </h2>
       <p className="mb-6 text-gray-500 font-light">
         Need inspiration or a gentle nudge? Click below to receive a message!
       </p>
@@ -112,17 +117,17 @@ const Home = ({ setCurrentPage }) => (
         onClick={() => setCurrentPage && setCurrentPage('fortune')}
         className="px-8 py-3 bg-soichu-400 text-white rounded-lg shadow font-light hover:bg-soichu-500 transition"
       >
-        Draw a Card <span className="ml-2" role="img" aria-label="wing">🪽</span>
+        Draw a Card
       </button>
     </section>
 
-    {/* About / Vision Preview (no image) */}
+    {/* About / Vision Preview (centered) */}
     <section className="mb-20">
-      <div>
+      <div className="flex flex-col items-center text-center">
         <h2 className="text-2xl font-ultralight geomanist-ultra-thin mb-4">
           About Soichu & Vision
         </h2>
-        <p className="mb-3">
+        <p className="mb-3 max-w-2xl">
           What began with visual creations from sacred bark now expands through living rituals and experiences, where art, nature, and energy align to create transformative encounters.
           <br />
           Our vision: Inspire a cultural paradigm shift towards a conscious and sustainable way of living—together.
