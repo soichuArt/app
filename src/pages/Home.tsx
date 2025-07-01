@@ -7,6 +7,9 @@ import {
   Zap,
   Sparkles,
 } from 'lucide-react';
+import ResourceCard from '../components/ResourceCard';
+import SoichuLogo from '../components/SoichuLogo';
+import SectionTitle from '../components/SectionTitle';
 
 // Resource cards data
 const resources = [
@@ -94,10 +97,8 @@ const Home = ({ setCurrentPage }) => (
       >
         art as a living presence
       </h1>
-      <h2
-        className="text-2xl md:text-3xl geomanist-ultra-thin mb-6"
-      >
-        welcome to Pueblo, Soichu's gathering.
+      <h2 className="text-2xl md:text-3xl geomanist-ultra-thin mb-6">
+        welcome to the Pueblo community
       </h2>
       <div className="flex justify-center mb-4">
         <button
@@ -109,43 +110,33 @@ const Home = ({ setCurrentPage }) => (
         </button>
       </div>
       <p className="max-w-2xl mx-auto text-lg font-light text-gray-500">
-        Connect, share, and grow with fellow seekers.<br /> Explore free resources,
+        Connect, share, and grow with fellow seekers. Explore free resources,
         collective wisdom, and living rituals.
       </p>
     </div>
 
     {/* Featured Free Resources */}
     <section className="mb-20">
-      <h2 className="text-2xl font-ultralight geomanist-ultra-thin mb-8 text-center">
-        Featured Free Resources
-      </h2>
+      <SectionTitle>Featured Free Resources</SectionTitle>
       <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-8 mx-auto max-w-4xl">
-        {resources.map((res, idx) => {
-          const Icon = res.icon;
-          return (
-            <button
-              key={res.title}
-              onClick={() => res.onClick(setCurrentPage)}
-              className="bg-white rounded-xl shadow p-6 flex flex-col items-center hover:shadow-lg transition group border border-soichu-100 cursor-pointer"
-              style={{ minHeight: 220 }}
-            >
-              <Icon className="h-10 w-10 mb-4 text-soichu-600 group-hover:text-soichu-700" />
-              <h3 className="text-lg font-medium mb-1 text-soichu-700">{res.title}</h3>
-              <p className="mb-2 text-sm text-center">{res.description}</p>
-              <span className="mt-auto px-4 py-1 bg-soichu-50 text-soichu-700 rounded-full text-sm shadow group-hover:bg-soichu-100">
-                {res.cta}
-              </span>
-            </button>
-          );
-        })}
+        {resources.map((res, idx) => (
+          <ResourceCard
+            key={res.title}
+            title={res.title}
+            description={res.description}
+            icon={res.icon}
+            cta={res.cta}
+            onClick={() => res.onClick(setCurrentPage)}
+          />
+        ))}
       </div>
     </section>
 
     {/* Soichu's Card (Interactive Element) */}
     <section className="mb-20 text-center">
-      <h2 className="text-2xl geomanist-ultra-thin mb-4">
+      <SectionTitle>
         Soichu's Card <span className="ml-1" role="img" aria-label="wing">🪽</span>
-      </h2>
+      </SectionTitle>
       <p className="mb-6 text-gray-500 font-light">
         Need inspiration or a gentle nudge? Click below to receive a message!
       </p>
@@ -160,9 +151,7 @@ const Home = ({ setCurrentPage }) => (
     {/* About / Vision Preview (centered) */}
     <section className="mb-20">
       <div className="flex flex-col items-center text-center">
-        <h2 className="text-2xl font-ultralight geomanist-ultra-thin mb-4">
-          About Soichu & Vision
-        </h2>
+        <SectionTitle>About Soichu & Vision</SectionTitle>
         <p className="mb-3 max-w-2xl">
           What began with visual creations from sacred bark now expands through living rituals and experiences, where art, nature, and energy align to create transformative encounters.
           <br />
@@ -179,9 +168,7 @@ const Home = ({ setCurrentPage }) => (
 
     {/* Upcoming Events & Rituals */}
     <section className="mb-20">
-      <h2 className="text-2xl geomanist-ultra-thin mb-6 text-center">
-        Upcoming Events & Rituals
-      </h2>
+      <SectionTitle>Upcoming Events & Rituals</SectionTitle>
       <div className="text-center">
         <button
           onClick={() => setCurrentPage && setCurrentPage('events')}
@@ -198,9 +185,7 @@ const Home = ({ setCurrentPage }) => (
 
     {/* Shop/Offerings Preview */}
     <section className="mb-16">
-      <h2 className="text-2xl geomanist-ultra-thin mb-6 text-center">
-        Shop & Offerings
-      </h2>
+      <SectionTitle>Shop & Offerings</SectionTitle>
       <div className="text-center">
         <button
           onClick={() => setCurrentPage && setCurrentPage('shop')}
@@ -216,11 +201,7 @@ const Home = ({ setCurrentPage }) => (
 
     {/* Footer Soichu Logo */}
     <footer className="text-center text-sm text-gray-400 mt-16 pb-6">
-<img
-  src={`${import.meta.env.BASE_URL}logoSOICHU-01.jpg`}
-  alt="Soichu Logo"
-  className="mx-auto w-28 mb-2"
-/>
+      <SoichuLogo />
       © {new Date().getFullYear()} Soichu · Art as a Living Presence
     </footer>
   </div>
