@@ -216,10 +216,10 @@ const Home = ({ setCurrentPage }) => (
 
     {/* Footer Soichu Logo */}
     <footer className="text-center text-sm text-gray-400 mt-16 pb-6">
-      <img
+<img
   src={`${import.meta.env.BASE_URL}logoSOICHU-01.jpg`}
   alt="Soichu Logo"
-  className="mx-auto w-20 mb-2"
+  className="mx-auto w-28 mb-2"
 />
       © {new Date().getFullYear()} Soichu · Art as a Living Presence
     </footer>
