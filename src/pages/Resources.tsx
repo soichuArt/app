@@ -15,63 +15,55 @@ const resources = [
     title: 'Guided Meditations',
     description: 'Listen to free audio & video meditations.',
     icon: Headphones,
-    onClick: () =>
-      window.open(
-        'https://open.spotify.com/show/5Uv5Q2toxlK3b0MJ6i5FYz?si=d265ee45842f4972',
-        '_blank'
-      ),
+    onClick: undefined,
     cta: 'Listen',
   },
   {
-    title: 'Spiritual Playlists',
+    title: 'Stress-free Playlists',
     description: 'Curated music for rituals and daily uplift.',
     icon: Zap,
-    onClick: () =>
-      window.open(
-        'https://open.spotify.com/user/31phqpxk7z3wucg3lpzjv6f3e5c4?si=29e6e8c2e90b4c2c',
-        '_blank'
-      ),
+    onClick: undefined,
     cta: 'Play',
   },
   {
     title: 'YouTube Channel',
     description: 'Art, rituals, creative processes & talks.',
     icon: Youtube,
-    onClick: () =>
-      window.open('https://www.youtube.com/@soichuart', '_blank'),
+    onClick: undefined,
     cta: 'Watch',
   },
   {
-    title: 'Resource Directory',
+    title: 'Books',
     description: 'Find coaches, artists, tools & books for your journey.',
     icon: BookOpen,
-    onClick: () =>
-      window.open(
-        'https://docs.google.com/document/d/1d7uQfAe8wNwM7bPOjZoRZqYk9sA2-AeO4rJZpQ0YcS8',
-        '_blank'
-      ),
+    onClick: undefined,
     cta: 'Explore',
   },
-  {
-    title: 'Habit Tracker (Free)',
+ {
+    title: 'Podcasts',
+    description: 'Find coaches, artists, tools & books for your journey.',
+    icon: micro,
+    onClick: undefined,
+    cta: 'Explore',
+  },  
+   {
+    title: 'Movies',
+    description: 'Find coaches, artists, tools & books for your journey.',
+    icon: cam,
+    onClick: undefined,
+    cta: 'Explore',
+  },    {
+    title: 'Habit Tracker',
     description: 'Printable & digital templates for growth.',
     icon: Sparkles,
-    onClick: () =>
-      window.open(
-        'https://drive.google.com/drive/folders/1zdrF6xwotmxfh9jc1Q7dN4lZ6WnUMyF2?usp=sharing',
-        '_blank'
-      ),
-    cta: 'Download',
+    onClick: undefined,
+    cta: 'Zoom',
   },
   {
     title: 'Upcoming Events',
     description: 'Rituals, workshops & group gatherings.',
     icon: Users,
-    onClick: () =>
-      window.open(
-        'https://www.soysoichu.com/events',
-        '_blank'
-      ),
+    onClick: undefined,
     cta: 'See Events',
   },
 ];
