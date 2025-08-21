@@ -1,5 +1,3 @@
-
-import React from 'react';
 import {
   Users,
   BookOpen,
@@ -17,7 +15,7 @@ const resources = [
     title: 'Guided Meditations',
     description: 'Listen to free audio & video meditations.',
     icon: Headphones,
-    onClick: setCurrentPage =>
+    onClick: () =>
       window.open(
         'https://open.spotify.com/show/5Uv5Q2toxlK3b0MJ6i5FYz?si=d265ee45842f4972',
         '_blank'
@@ -28,10 +26,10 @@ const resources = [
     title: 'Stress-free Playlists',
     description: 'Curated music for rituals and daily uplift.',
     icon: Zap,
-    onClick: setCurrentPage =>
+    onClick: () =>
       window.open(
-       'https://open.spotify.com/playlist/62lz8cDvGdQsqHjA0XXxRu',        
-       '_blank'
+        'https://open.spotify.com/playlist/62lz8cDvGdQsqHjA0XXxRu',
+        '_blank'
       ),
     cta: 'Play',
   },
@@ -39,7 +37,7 @@ const resources = [
     title: 'YouTube Channel',
     description: 'Art, rituals, creative processes & talks.',
     icon: Youtube,
-    onClick: setCurrentPage =>
+    onClick: () =>
       window.open('https://www.youtube.com/@soichuart', '_blank'),
     cta: 'Watch',
   },
@@ -47,14 +45,20 @@ const resources = [
     title: 'Resource Directory',
     description: 'Find coaches, artists, tools & books for your journey.',
     icon: BookOpen,
-    onClick: setCurrentPage => setCurrentPage && setCurrentPage('resources'),
+    onClick: (setCurrentPage) => {
+      window.scrollTo({ top: 0, behavior: 'smooth' })
+      setCurrentPage('resources')
+    },
     cta: 'Explore',
   },
   {
     title: 'Habit Tracker',
     description: 'Printable & digital templates for growth.',
     icon: Sparkles,
-    onClick: setCurrentPage => setCurrentPage && setCurrentPage('library'),
+    onClick: setCurrentPage => {
+      window.scrollTo({ top: 0, behavior: 'smooth' })
+      setCurrentPage('library')
+    },
     cta: 'Download',
   },
 ];
@@ -68,7 +72,11 @@ function CalendarIcon(props) {
   );
 }
 
-const Home = ({ setCurrentPage }) => (
+interface HomeProps {
+  setCurrentPage: (page: string) => void;
+}
+
+const Home = ({ setCurrentPage }: HomeProps) => (
   <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 font-geomanist text-gray-500">
     {/* Hero Banner */}
     <div className="text-center mb-16 relative">
@@ -89,8 +97,11 @@ const Home = ({ setCurrentPage }) => (
       </h2>
       <div className="flex justify-center mb-4">
         <button
-         onClick={() => setCurrentPage('community')}
-         className="px-8 py-3 bg-soichu-600 text-white rounded-lg shadow-lg font-light flex items-center space-x-2 hover:bg-soichu-700 transition"
+          onClick={() => {
+            window.scrollTo({ top: 0, behavior: 'smooth' })
+            setCurrentPage('community')
+          }}
+          className="px-8 py-3 bg-soichu-600 text-white rounded-lg shadow-lg font-light flex items-center space-x-2 hover:bg-soichu-700 transition"
         >
           <Users className="h-5 w-5" />
           <span>Join Free Community</span>
@@ -128,10 +139,10 @@ const Home = ({ setCurrentPage }) => (
         Need inspiration or a gentle nudge? Click below to receive a message!
       </p>
       <button
-        onClick={() => setCurrentPage && setCurrentPage('fortune')}
+        onClick={() => setCurrentPage('fortune')}
         className="px-8 py-3 bg-soichu-400 text-white rounded-lg shadow font-light hover:bg-soichu-500 transition"
       >
-        Draw a Card
+        Coming Soon
       </button>
     </section>
 
@@ -145,7 +156,10 @@ const Home = ({ setCurrentPage }) => (
           Our vision: Inspire a cultural paradigm shift towards a conscious and sustainable way of living—together.
         </p>
         <button
-          onClick={() => setCurrentPage('essence')}
+          onClick={() => {
+            window.scrollTo({ top: 0, behavior: 'smooth' })
+            setCurrentPage('essence')
+          }}
           className="text-soichu-600 hover:underline font-medium"
         >
           Read More
@@ -158,7 +172,10 @@ const Home = ({ setCurrentPage }) => (
       <SectionTitle>Upcoming Events & Rituals</SectionTitle>
       <div className="text-center">
         <button
-          onClick={() => setCurrentPage && setCurrentPage('events')}
+          onClick={() => {
+            window.scrollTo({ top: 0, behavior: 'smooth' })
+            setCurrentPage('calendar')
+          }}
           className="px-8 py-3 bg-soichu-600 text-white rounded-lg shadow-lg font-light flex items-center space-x-2 mx-auto hover:bg-soichu-700 transition"
         >
           <CalendarIcon className="h-5 w-5" />
@@ -175,7 +192,10 @@ const Home = ({ setCurrentPage }) => (
       <SectionTitle>Shop & Offerings</SectionTitle>
       <div className="text-center">
         <button
-          onClick={() => setCurrentPage && setCurrentPage('shop')}
+          onClick={() => {
+            window.scrollTo({ top: 0, behavior: 'smooth' })
+            setCurrentPage('shop')
+          }}
           className="px-8 py-3 bg-soichu-400 text-white rounded-lg shadow font-light hover:bg-soichu-500 transition"
         >
           Visit Shop

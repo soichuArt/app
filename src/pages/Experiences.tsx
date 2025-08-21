@@ -1,7 +1,10 @@
-import React from 'react';
 import { Sparkles, Users, Eye, Heart, ArrowRight } from 'lucide-react';
 
-const Experiences = () => {
+type ExperiencesProps = {
+  setCurrentPage: (page: string) => void;
+};
+
+const Experiences = ({ setCurrentPage }: ExperiencesProps) => {
   return (
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
       {/* Header */}
@@ -13,16 +16,16 @@ const Experiences = () => {
           experiences
         </h1>
         <p className="text-xl text-gray-500 font-light max-w-3xl mx-auto leading-relaxed">
-          Evolving experiences that blend art, spirituality, and connection. Interactive art, workshops, 
+          Evolving experiences that blend art, spirituality, and connection. Interactive art, workshops,
           and evolving installations crafted to spark participation, foster deep connection, and inspire personal transformation.
         </p>
       </div>
 
       {/* Featured Image */}
       <div className="mb-16 text-center">
-        <img 
-          src={`${import.meta.env.BASE_URL}thetribe5.webp`} 
-          alt="The Tribe ~ Latam~Spain Entrepreneurs Meeting" 
+        <img
+          src={`${import.meta.env.BASE_URL}thetribe5.webp`}
+          alt="The Tribe ~ Latam~Spain Entrepreneurs Meeting"
           className="w-full max-w-4xl h-64 md:h-96 object-cover rounded-lg mx-auto"
         />
         <p className="text-sm text-gray-400 font-light italic mt-4">
@@ -37,21 +40,26 @@ const Experiences = () => {
             the tribe: a journey of collective creation
           </h2>
           <p className="text-lg text-gray-500 font-light leading-relaxed">
-            It's a unique co-creation experience where participants collaboratively build an artistic piece using local tree bark. 
+            It's a unique co-creation experience where participants collaboratively build an artistic piece using local tree bark.
             This process fosters deep connections, creative expression, and a shared sense of purpose.
           </p>
           <p className="text-lg text-gray-500 font-light leading-relaxed">
-            The Tribe has been successfully presented in over 20 public and private events, including contemporary art 
+            The Tribe has been successfully presented in over 20 public and private events, including contemporary art
             and spirituality festivals in Australia and Indonesia.
           </p>
-          <button className="px-8 py-3 bg-soichu-600 text-white rounded-lg hover:bg-soichu-700 transition duration-200 font-light">
+          <button 
+           onClick={() => {
+            window.scrollTo({ top: 0, behavior: 'smooth' })
+            setCurrentPage('contact')
+          }}
+          className="px-8 py-3 bg-soichu-600 text-white rounded-lg hover:bg-soichu-700 transition duration-200 font-light">
             Explore Formats & Availability
           </button>
         </div>
         <div className="text-center">
-          <img 
-            src={`${import.meta.env.BASE_URL}thetribe4.webp`} 
-            alt="Co-creation process at Tetiana's Birthday" 
+          <img
+            src={`${import.meta.env.BASE_URL}thetribe4.webp`}
+            alt="Co-creation process at Tetiana's Birthday"
             className="w-full h-80 object-cover rounded-lg"
           />
           <p className="text-sm text-gray-400 font-light italic mt-4">
@@ -67,9 +75,9 @@ const Experiences = () => {
       {/* Soichu Gates */}
       <div className="grid lg:grid-cols-2 gap-16 mb-16">
         <div className="text-center">
-          <img 
-            src={`${import.meta.env.BASE_URL}gatesExpo1.webp`} 
-            alt="Soichu Gates Installation" 
+          <img
+            src={`${import.meta.env.BASE_URL}gatesExpo1.webp`}
+            alt="Soichu Gates Installation"
             className="w-full h-80 object-cover rounded-lg"
           />
           <p className="text-sm text-gray-400 font-light italic mt-4">
@@ -81,8 +89,8 @@ const Experiences = () => {
             soichu gates: mirrors as portals
           </h2>
           <p className="text-lg text-gray-500 font-light leading-relaxed">
-            It's a perceptual journey where mirrors become portals to introspection, insight, and creativity. 
-            This unique project blends artistic reflection, literature, and interactive engagement, allowing participants 
+            It's a perceptual journey where mirrors become portals to introspection, insight, and creativity.
+            This unique project blends artistic reflection, literature, and interactive engagement, allowing participants
             to explore new dimensions of thought and self-awareness.
           </p>
           <div className="bg-soichu-50 rounded-lg p-6">
@@ -90,12 +98,12 @@ const Experiences = () => {
               Gates Affirmation
             </h3>
             <p className="text-gray-500 font-light italic">
-              "I have courage. I turn my attention inward. My eyes are the gates. I see beyond. 
+              "I have courage. I turn my attention inward. My eyes are the gates. I see beyond.
               I am grateful and practice acceptance. I embrace who I am."
             </p>
           </div>
-          <button 
-            onClick={() => window.open('https://square.link/u/ifgRipj6', '_blank')}
+          <button
+            onClick={() => window.open('https://www.soichu.com/expo.php', '_blank')}
             className="px-8 py-3 bg-soichu-600 text-white rounded-lg hover:bg-soichu-700 transition duration-200 font-light"
           >
             Purchase Gates Experience
@@ -114,22 +122,24 @@ const Experiences = () => {
             tailored creations
           </h2>
           <p className="text-lg text-gray-500 font-light leading-relaxed">
-            At soichu, we weave art into the heart of spaces, crafting environments that inspire, connect, and resonate. 
-            Designed for visionary real estate, hospitality, and entrepreneurial projects, our bespoke art concepts blend 
+            At soichu, we weave art into the heart of spaces, crafting environments that inspire, connect, and resonate.
+            Designed for visionary real estate, hospitality, and entrepreneurial projects, our bespoke art concepts blend
             nature, culture, and intention to create ambiances that live and breathe.
           </p>
-          <button className="px-8 py-3 bg-soichu-600 text-white rounded-lg hover:bg-soichu-700 transition duration-200 font-light">
+          <button
+            onClick={() => window.open('https://www.soichu.com/ambiences.php', '_blank')}
+            className="px-8 py-3 bg-soichu-600 text-white rounded-lg hover:bg-soichu-700 transition duration-200 font-light">
             Explore Ambiences
           </button>
         </div>
         <div className="text-center">
-          <img 
-            src={`${import.meta.env.BASE_URL}essence2.jpg`} 
-            alt="Project, Sanur, Bali. Space proposal mock-up" 
+          <img
+            src={`${import.meta.env.BASE_URL}essence2.jpg`}
+            alt="Project, Sanur, Bali. Space proposal mock-up"
             className="w-full h-80 object-cover rounded-lg"
           />
           <p className="text-sm text-gray-400 font-light italic mt-4">
-Gaia's eye. Bark on wall. Bonwurrung Country, Melbourne. Australia </p>
+            Gaia's eye. Bark on wall. Bonwurrung Country, Melbourne. Australia </p>
         </div>
       </div>
 
@@ -140,9 +150,9 @@ Gaia's eye. Bark on wall. Bonwurrung Country, Melbourne. Australia </p>
       {/* Spiritual & Transformational */}
       <div className="grid lg:grid-cols-2 gap-16 mb-16">
         <div className="text-center">
-          <img 
-            src={`${import.meta.env.BASE_URL}workshop1.webp`} 
-            alt="Workshop at Pangaea Festival" 
+          <img
+            src={`${import.meta.env.BASE_URL}workshop1.webp`}
+            alt="Workshop at Pangaea Festival"
             className="w-full h-80 object-cover rounded-lg"
           />
           <p className="text-sm text-gray-400 font-light italic mt-4">
@@ -159,8 +169,8 @@ Gaia's eye. Bark on wall. Bonwurrung Country, Melbourne. Australia </p>
           <ul className="text-lg text-gray-500 font-light space-y-2">
             <li>~ Angels oracle readings are powerful and profound channeled messages</li>
             <li>~ Meditation guides available on Spotify and YouTube</li>
-            <li>~ Workshop <strong>Create Your Own Pure Spiritual Shape</strong> - a creative process where participants 
-            design their own spiritual bark artwork</li>
+            <li>~ Workshop <strong>Create Your Own Pure Spiritual Shape</strong> - a creative process where participants
+              design their own spiritual bark artwork</li>
           </ul>
         </div>
       </div>
@@ -175,7 +185,7 @@ Gaia's eye. Bark on wall. Bonwurrung Country, Melbourne. Australia </p>
             </h3>
           </div>
           <p className="text-gray-500 font-light leading-relaxed">
-            Collective creation experiences that foster deep connections and shared artistic expression 
+            Collective creation experiences that foster deep connections and shared artistic expression
             through collaborative bark art projects.
           </p>
         </div>
@@ -187,7 +197,7 @@ Gaia's eye. Bark on wall. Bonwurrung Country, Melbourne. Australia </p>
             </h3>
           </div>
           <p className="text-gray-500 font-light leading-relaxed">
-            Immersive mirror installations that create portals for introspection and expanded perception, 
+            Immersive mirror installations that create portals for introspection and expanded perception,
             challenging conventional reality.
           </p>
         </div>
@@ -199,7 +209,7 @@ Gaia's eye. Bark on wall. Bonwurrung Country, Melbourne. Australia </p>
             </h3>
           </div>
           <p className="text-gray-500 font-light leading-relaxed">
-            Bespoke environmental art that transforms spaces into living sanctuaries, 
+            Bespoke environmental art that transforms spaces into living sanctuaries,
             weaving nature and intention into architectural design.
           </p>
         </div>
@@ -211,16 +221,26 @@ Gaia's eye. Bark on wall. Bonwurrung Country, Melbourne. Australia </p>
           join soichu's living art
         </h2>
         <p className="text-lg text-gray-500 font-light mb-8 max-w-2xl mx-auto">
-          Every Soichu Experience invites you to explore, create, and connect on a deeper level. 
-          Whether through artistic co-creation, immersive installations, or spiritual practices, 
+          Every Soichu Experience invites you to explore, create, and connect on a deeper level.
+          Whether through artistic co-creation, immersive installations, or spiritual practices,
           each experience is a unique opportunity to expand perception and meaning.
         </p>
         <div className="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-4">
-          <button className="px-8 py-3 bg-soichu-600 text-white rounded-lg hover:bg-soichu-700 transition duration-200 font-light flex items-center space-x-2">
+          <button
+            onClick={() => {
+              window.scrollTo({ top: 0, behavior: 'smooth' })
+              setCurrentPage('contact')
+            }}
+            className="px-8 py-3 bg-soichu-600 text-white rounded-lg hover:bg-soichu-700 transition duration-200 font-light flex items-center space-x-2">
             <span>Contact Us Now</span>
             <ArrowRight className="h-5 w-5" />
           </button>
-          <button className="px-8 py-3 text-gray-500 hover:text-gray-600 transition duration-200 font-light">
+          <button
+            onClick={() => {
+              window.scrollTo({ top: 0, behavior: 'smooth' })
+              setCurrentPage('shop')
+            }}
+            className="px-8 py-3 text-gray-500 hover:text-gray-600 transition duration-200 font-light">
             Go to Store →
           </button>
         </div>

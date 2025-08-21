@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import emailjs from '@emailjs/browser';
 import { MessageCircle, Mail, Instagram, ExternalLink, MapPin, Phone } from 'lucide-react';
 
 interface ContactProps {
@@ -23,10 +24,33 @@ const Contact = ({ setCurrentPage }: ContactProps) => {
     }));
   };
 
+  const serviceId = import.meta.env.VITE_EMAIL_SERVICE_ID;
+  const templateId = import.meta.env.VITE_EMAIL_TEMPLATE_ID;
+  const userId = import.meta.env.VITE_EMAIL_USER_ID;
+
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    // Handle form submission
-    console.log('Form submitted:', formData);
+    emailjs.send(
+      serviceId,
+      templateId,
+      formData,
+      userId
+    )
+      .then((result) => {
+        alert('Mensaje enviado correctamente');
+        setFormData({
+          name: '',
+          email: '',
+          phone: '',
+          subject: '',
+          message: '',
+          interest: 'general',
+        });
+        console.log('Form submitted:', formData);
+      }, (error) => {
+        alert('Error al enviar el mensaje');
+        console.error(error.text);
+      });
   };
 
   return (
@@ -40,7 +64,7 @@ const Contact = ({ setCurrentPage }: ContactProps) => {
           contact soichu
         </h1>
         <p className="text-lg text-gray-500 font-light max-w-3xl mx-auto leading-relaxed">
-          If you have any questions, collaboration proposals, or simply want to connect, 
+          If you have any questions, collaboration proposals, or simply want to connect,
           please leave your message here. We're here to listen and support your journey.
         </p>
       </div>
@@ -51,7 +75,7 @@ const Contact = ({ setCurrentPage }: ContactProps) => {
           <h2 className="text-2xl font-geomanist font-ultralight text-gray-500 mb-6 geomanist-ultra-thin">
             Send us a Message
           </h2>
-          
+
           <form onSubmit={handleSubmit} className="space-y-6">
             <div>
               <label htmlFor="name" className="block text-sm font-light text-gray-500 mb-2">
@@ -85,7 +109,7 @@ const Contact = ({ setCurrentPage }: ContactProps) => {
                   required
                 />
               </div>
-              
+
               <div>
                 <label htmlFor="phone" className="block text-sm font-light text-gray-500 mb-2">
                   Phone Number
@@ -170,13 +194,13 @@ const Contact = ({ setCurrentPage }: ContactProps) => {
             <h3 className="text-xl font-geomanist font-ultralight text-gray-500 mb-6 geomanist-ultra-thin">
               Get in Touch
             </h3>
-            
+
             <div className="space-y-4">
               <div className="flex items-center space-x-4">
                 <Mail className="h-5 w-5 text-soichu-500" />
                 <div>
                   <p className="font-light text-gray-600 text-sm">Email</p>
-                  <a 
+                  <a
                     href="mailto:info@soichu.com"
                     className="text-gray-500 font-light hover:text-soichu-600 transition duration-200"
                   >
@@ -184,12 +208,12 @@ const Contact = ({ setCurrentPage }: ContactProps) => {
                   </a>
                 </div>
               </div>
-              
+
               <div className="flex items-center space-x-4">
                 <MessageCircle className="h-5 w-5 text-soichu-500" />
                 <div>
                   <p className="font-light text-gray-600 text-sm">WhatsApp</p>
-                  <a 
+                  <a
                     href="https://wa.me/61490666858"
                     target="_blank"
                     rel="noopener noreferrer"
@@ -199,7 +223,7 @@ const Contact = ({ setCurrentPage }: ContactProps) => {
                   </a>
                 </div>
               </div>
-              
+
               <div className="flex items-center space-x-4">
                 <MapPin className="h-5 w-5 text-soichu-500" />
                 <div>
@@ -207,7 +231,7 @@ const Contact = ({ setCurrentPage }: ContactProps) => {
                   <p className="text-gray-500 font-light text-sm">Bali, Indonesia</p>
                 </div>
               </div>
-              
+
               <div className="flex items-center space-x-4">
                 <Phone className="h-5 w-5 text-soichu-500" />
                 <div>
@@ -223,7 +247,7 @@ const Contact = ({ setCurrentPage }: ContactProps) => {
             <h3 className="text-xl font-geomanist font-ultralight text-gray-500 mb-6 geomanist-ultra-thin">
               Connect with Us
             </h3>
-            
+
             <div className="space-y-4">
               <a
                 href="https://soichu.com"
@@ -237,7 +261,7 @@ const Contact = ({ setCurrentPage }: ContactProps) => {
                 </div>
                 <span className="text-gray-500 font-light text-sm">soichu.com</span>
               </a>
-              
+
               <a
                 href="https://www.instagram.com/soichu.art"
                 target="_blank"
@@ -250,7 +274,7 @@ const Contact = ({ setCurrentPage }: ContactProps) => {
                 </div>
                 <span className="text-gray-500 font-light text-sm">@soichu.art</span>
               </a>
-              
+
               <a
                 href="https://www.facebook.com/soichu.art"
                 target="_blank"
@@ -272,10 +296,10 @@ const Contact = ({ setCurrentPage }: ContactProps) => {
               Stay Connected
             </h3>
             <p className="text-gray-500 font-light mb-6 text-sm">
-              Receive updates about new offerings, upcoming events, and sacred insights 
+              Receive updates about new offerings, upcoming events, and sacred insights
               delivered to your inbox with love and intention.
             </p>
-            
+
             <div className="flex flex-col sm:flex-row gap-3">
               <input
                 type="email"
@@ -304,11 +328,11 @@ const Contact = ({ setCurrentPage }: ContactProps) => {
             Our Sacred Community
           </h2>
           <p className="text-base text-gray-500 font-light max-w-2xl mx-auto">
-            We cultivate a space of respect, authenticity, and spiritual growth. 
+            We cultivate a space of respect, authenticity, and spiritual growth.
             All interactions are guided by love, compassion, and sacred intention.
           </p>
         </div>
-        
+
         <div className="grid md:grid-cols-3 gap-8">
           <div className="text-center">
             <div className="w-16 h-16 bg-soichu-100 rounded-lg flex items-center justify-center mx-auto mb-4">
@@ -321,7 +345,7 @@ const Contact = ({ setCurrentPage }: ContactProps) => {
               We honor all spiritual paths and communicate with kindness and understanding.
             </p>
           </div>
-          
+
           <div className="text-center">
             <div className="w-16 h-16 bg-soichu-100 rounded-lg flex items-center justify-center mx-auto mb-4">
               <ExternalLink className="h-8 w-8 text-soichu-600" />
@@ -333,7 +357,7 @@ const Contact = ({ setCurrentPage }: ContactProps) => {
               We encourage genuine expression and vulnerability in our sacred space.
             </p>
           </div>
-          
+
           <div className="text-center">
             <div className="w-16 h-16 bg-soichu-100 rounded-lg flex items-center justify-center mx-auto mb-4">
               <Instagram className="h-8 w-8 text-soichu-600" />

@@ -69,14 +69,15 @@ const Navigation = ({ currentPage, setCurrentPage }: NavigationProps) => {
       ]
     },
     {
-      id: 'premium',
-      label: 'Premium',
-      icon: Crown,
-      isDropdown: true,
-      items: [
-        { id: 'premium', label: 'Premium', icon: Crown },
-        { id: 'shop', label: 'Shop', icon: ShoppingBag }
-      ]
+      id: 'shop',
+      label: 'Shop',
+      icon: ShoppingBag,
+      isDropdown: false,
+      page: 'shop'
+      // items: [
+      //   { id: 'premium', label: 'Premium', icon: Crown },
+      //   { id: 'shop', label: 'Shop', icon: ShoppingBag }
+      // ]
     },
     {
       id: 'connect',

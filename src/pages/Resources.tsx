@@ -1,4 +1,3 @@
-import React from 'react';
 import {
   Users,
   BookOpen,
@@ -17,28 +16,38 @@ const resources = [
     title: 'Guided Meditations',
     description: 'Listen to free audio & video meditations.',
     icon: Headphones,
-    onClick: undefined,
+    onClick: () =>
+      window.open(
+        'https://open.spotify.com/show/5Uv5Q2toxlK3b0MJ6i5FYz?si=d265ee45842f4972',
+        '_blank'
+      ),
     cta: 'Listen',
   },
   {
     title: 'Stress-free Playlists',
     description: 'Curated music for rituals and daily uplift.',
     icon: Zap,
-    onClick: undefined,
+    onClick: () =>
+      window.open(
+        'https://open.spotify.com/playlist/62lz8cDvGdQsqHjA0XXxRu',
+        '_blank'
+      ),
     cta: 'Play',
   },
   {
     title: 'YouTube Channel',
     description: 'Art, rituals, creative processes & talks.',
     icon: Youtube,
-    onClick: undefined,
+    onClick: () =>
+      window.open('https://www.youtube.com/@soichuart', '_blank'),
     cta: 'Watch',
   },
   {
     title: 'Books',
     description: 'Find coaches, artists, tools & books for your journey.',
     icon: BookOpen,
-    onClick: undefined,
+    onClick: () =>
+      window.open('https://drive.google.com/drive/folders/1dqlwMJYpU_4F2YYFxZ3HhyCoS_U9Pk2C?usp=sharing', '_blank'),
     cta: 'Explore',
   },
   {
@@ -47,7 +56,7 @@ const resources = [
     icon: Mic,
     onClick: undefined,
     cta: 'Explore',
-  },  
+  },
   {
     title: 'Movies',
     description: 'Find coaches, artists, tools & books for your journey.',
@@ -66,12 +75,19 @@ const resources = [
     title: 'Upcoming Events',
     description: 'Rituals, workshops & group gatherings.',
     icon: Users,
-    onClick: undefined,
+    onClick: (setCurrentPage) => {
+      window.scrollTo({ top: 0, behavior: 'smooth' })
+      setCurrentPage('calendar')
+    },
     cta: 'See Events',
   },
 ];
 
-const Resources = () => (
+interface ResourcesProps {
+  setCurrentPage: (page: string) => void;
+}
+
+const Resources = ({ setCurrentPage }: ResourcesProps) =>  (
   <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 font-geomanist text-gray-500">
     {/* Banner igual que en la Home */}
     <div className="text-center mb-16 relative">
@@ -106,7 +122,7 @@ const Resources = () => (
             description={res.description}
             icon={res.icon}
             cta={res.cta}
-            onClick={res.onClick}
+            onClick={() => res.onClick && res.onClick(setCurrentPage)}
           />
         ))}
       </div>

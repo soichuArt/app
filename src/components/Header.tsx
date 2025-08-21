@@ -1,6 +1,5 @@
-import React from 'react';
 import { ExternalLink } from 'lucide-react';
-import NotificationSystem from './NotificationSystem';
+// import NotificationSystem from './NotificationSystem';
 
 const Header = () => {
   return (
@@ -22,7 +21,7 @@ const Header = () => {
           </div>
           
           <div className="flex items-center space-x-4">
-            <NotificationSystem />
+            {/* <NotificationSystem /> */}
             <a
               href="https://soichu.com"
               target="_blank"
@@ -32,11 +31,11 @@ const Header = () => {
               <ExternalLink className="h-4 w-4 mr-2" />
               Visit Website
             </a>
-            <div className="hidden sm:flex items-center space-x-2">
+            {/* <div className="hidden sm:flex items-center space-x-2">
               <div className="w-2 h-2 bg-soichu-400 rounded-full"></div>
               <div className="w-2 h-2 bg-soichu-500 rounded-full"></div>
               <div className="w-2 h-2 bg-soichu-600 rounded-full"></div>
-            </div>
+            </div> */}
           </div>
         </div>
       </div>

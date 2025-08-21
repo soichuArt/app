@@ -63,16 +63,16 @@ const Library = ({ setCurrentPage }: LibraryProps) => {
       isExternal: true,
       externalLink: 'https://open.spotify.com/show/5Uv5Q2toxlK3b0MJ6i5FYz?si=d265ee45842f4972',
     },
-    {
-      id: 5,
-      title: 'Ritual Space Creation',
-      type: 'videos',
-      format: 'Video',
-      duration: '18 min',
-      description: 'Step-by-step video showing how to create and consecrate your personal ritual space.',
-      icon: Video,
-      downloadCount: 1089,
-    },
+    // {
+    //   id: 5,
+    //   title: 'Ritual Space Creation',
+    //   type: 'videos',
+    //   format: 'Video',
+    //   duration: '18 min',
+    //   description: 'Step-by-step video showing how to create and consecrate your personal ritual space.',
+    //   icon: Video,
+    //   downloadCount: 1089,
+    // },
     {
       id: 6,
       title: 'Sacred Symbols Guide',
@@ -83,16 +83,16 @@ const Library = ({ setCurrentPage }: LibraryProps) => {
       icon: FileText,
       downloadCount: 543,
     },
-    {
-      id: 7,
-      title: 'Art as Healing Practice',
-      type: 'videos',
-      format: 'Video',
-      duration: '22 min',
-      description: 'Demonstration of using creative expression as a tool for emotional and spiritual healing.',
-      icon: Video,
-      downloadCount: 923,
-    },
+    // {
+    //   id: 7,
+    //   title: 'Art as Healing Practice',
+    //   type: 'videos',
+    //   format: 'Video',
+    //   duration: '22 min',
+    //   description: 'Demonstration of using creative expression as a tool for emotional and spiritual healing.',
+    //   icon: Video,
+    //   downloadCount: 923,
+    // },
     {
       id: 8,
       title: 'Daily Ritual Practices',
@@ -222,7 +222,9 @@ const Library = ({ setCurrentPage }: LibraryProps) => {
         
         <div className="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-4">
           <button 
-            onClick={() => setCurrentPage('meditations')}
+            onClick={() => {
+              window.scrollTo({ top: 0, behavior: 'smooth' })
+              setCurrentPage('meditations')}}
             className="px-8 py-3 bg-soichu-600 text-white rounded-lg hover:bg-soichu-700 transition duration-200 font-light"
           >
             Explore All Meditations
@@ -240,7 +242,7 @@ const Library = ({ setCurrentPage }: LibraryProps) => {
       </div>
 
       {/* Newsletter Signup */}
-      <div className="mt-16 bg-white rounded-lg p-12 shadow-sm border border-gray-200 text-center">
+      {/* <div className="mt-16 bg-white rounded-lg p-12 shadow-sm border border-gray-200 text-center">
         <h2 className="text-3xl font-sans font-thin text-gray-600 mb-4">
           Stay Connected
         </h2>
@@ -258,7 +260,7 @@ const Library = ({ setCurrentPage }: LibraryProps) => {
             Subscribe
           </button>
         </div>
-      </div>
+      </div> */}
     </div>
   );
 };
