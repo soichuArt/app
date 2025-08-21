@@ -75,8 +75,8 @@ const Rituals = ({ setCurrentPage }: RitualsProps) => {
     },
   ];
 
-  const filteredRituals = selectedCategory === 'all' 
-    ? rituals 
+  const filteredRituals = selectedCategory === 'all'
+    ? rituals
     : rituals.filter(ritual => ritual.category === selectedCategory);
 
   const handleBooking = (ritual: any) => {
@@ -99,7 +99,7 @@ const Rituals = ({ setCurrentPage }: RitualsProps) => {
           Rituals & Sacred Experiences
         </h1>
         <p className="text-xl text-gray-500 font-light max-w-3xl mx-auto leading-relaxed">
-          Sacred practices designed to guide your spiritual journey through art, nature, and divine connection. 
+          Sacred practices designed to guide your spiritual journey through art, nature, and divine connection.
           Each experience is crafted to foster transformation, healing, and deeper self-awareness.
         </p>
       </div>
@@ -110,11 +110,10 @@ const Rituals = ({ setCurrentPage }: RitualsProps) => {
           <button
             key={category.id}
             onClick={() => setSelectedCategory(category.id)}
-            className={`px-6 py-2 rounded-lg transition duration-200 font-light ${
-              selectedCategory === category.id
-                ? 'bg-soichu-600 text-white'
-                : 'bg-white text-gray-600 border border-gray-300 hover:bg-gray-50'
-            }`}
+            className={`px-6 py-2 rounded-lg transition duration-200 font-light ${selectedCategory === category.id
+              ? 'bg-soichu-600 text-white'
+              : 'bg-white text-gray-600 border border-gray-300 hover:bg-gray-50'
+              }`}
           >
             {category.label}
           </button>
@@ -129,18 +128,17 @@ const Rituals = ({ setCurrentPage }: RitualsProps) => {
             className="bg-white rounded-lg p-8 shadow-sm border border-gray-200 hover:shadow-md transition duration-200"
           >
             <div className="flex items-center justify-between mb-4">
-              <span className={`px-3 py-1 rounded-lg text-xs font-light ${
-                ritual.type === 'premium' || ritual.type === 'workshop' || ritual.type === 'installation'
-                  ? 'bg-soichu-100 text-soichu-700' 
-                  : ritual.type === 'free'
+              <span className={`px-3 py-1 rounded-lg text-xs font-light ${ritual.type === 'premium' || ritual.type === 'workshop' || ritual.type === 'installation'
+                ? 'bg-soichu-100 text-soichu-700'
+                : ritual.type === 'free'
                   ? 'bg-sage-100 text-sage-700'
                   : 'bg-cream-100 text-cream-700'
-              }`}>
-                {ritual.type === 'premium' ? 'Premium' : 
-                 ritual.type === 'free' ? 'Free' :
-                 ritual.type === 'workshop' ? 'Workshop' :
-                 ritual.type === 'installation' ? 'Installation' :
-                 ritual.type === 'group' ? 'Group Experience' : 'Guided'}
+                }`}>
+                {ritual.type === 'premium' ? 'Premium' :
+                  ritual.type === 'free' ? 'Free' :
+                    ritual.type === 'workshop' ? 'Workshop' :
+                      ritual.type === 'installation' ? 'Installation' :
+                        ritual.type === 'group' ? 'Group Experience' : 'Guided'}
               </span>
               <div className="flex items-center space-x-2 text-soichu-500">
                 {ritual.category === 'readings' && <Star className="h-5 w-5" />}
@@ -153,7 +151,7 @@ const Rituals = ({ setCurrentPage }: RitualsProps) => {
             <h3 className="text-xl font-geomanist font-ultralight text-gray-500 mb-3 geomanist-ultra-thin">
               {ritual.title}
             </h3>
-            
+
             <p className="text-gray-500 font-light mb-4 leading-relaxed">
               {ritual.description}
             </p>
@@ -190,7 +188,7 @@ const Rituals = ({ setCurrentPage }: RitualsProps) => {
                   <span className="font-light">{ritual.price}</span>
                 </div>
               </div>
-              <button 
+              <button
                 onClick={() => handleBooking(ritual)}
                 className="px-4 py-2 bg-soichu-600 text-white rounded-lg hover:bg-soichu-700 transition duration-200 text-sm font-light"
               >
@@ -211,7 +209,7 @@ const Rituals = ({ setCurrentPage }: RitualsProps) => {
             Hear from those who have experienced Soichu's powerful and profound channeled messages through Angel Oracle readings.
           </p>
         </div>
-        
+
         <div className="grid md:grid-cols-2 gap-8">
           <div className="bg-gray-50 rounded-lg p-6">
             <div className="flex items-center space-x-2 mb-3">
@@ -257,9 +255,9 @@ const Rituals = ({ setCurrentPage }: RitualsProps) => {
             </p>
           </div>
         </div>
-        
+
         <div className="text-center mt-8">
-          <button 
+          <button
             onClick={() => handleBooking({ squareLink: 'https://square.link/u/56XsvH8a' })}
             className="px-8 py-3 bg-soichu-600 text-white rounded-lg hover:bg-soichu-700 transition duration-200 font-light"
           >
@@ -278,25 +276,25 @@ const Rituals = ({ setCurrentPage }: RitualsProps) => {
             A ritual is a personal sacred act, done with intention, through which we awaken and honor our own spiritual power.
           </p>
         </div>
-        
+
         <div className="grid md:grid-cols-2 gap-8">
           <div>
             <h3 className="text-xl font-geomanist font-ultralight text-gray-500 mb-4 geomanist-ultra-thin">
               The Sacred Process
             </h3>
             <p className="text-gray-500 font-light mb-4">
-              Through a short meditation focused on your breath, look within for what you no longer need. 
+              Through a short meditation focused on your breath, look within for what you no longer need.
               It may be something small or great, recent or with you all your life.
             </p>
             <p className="text-gray-500 font-light mb-4">
-              Peel the outer layer with presence. With each movement, you go deeper into what you no longer want, 
+              Peel the outer layer with presence. With each movement, you go deeper into what you no longer want,
               releasing it, just as you peel away pieces of this skin from the talisman.
             </p>
             <p className="text-gray-500 font-light">
               Let it shine in its full splendor, just as you will begin to see yourself.
             </p>
           </div>
-          
+
           <div>
             <h3 className="text-xl font-geomanist font-ultralight text-gray-500 mb-4 geomanist-ultra-thin">
               What's Included
@@ -308,7 +306,7 @@ const Rituals = ({ setCurrentPage }: RitualsProps) => {
               <li>• Angel Card Reading included</li>
             </ul>
             <div className="mt-6">
-              <button 
+              <button
                 onClick={() => setCurrentPage('shop')}
                 className="px-6 py-3 bg-soichu-600 text-white rounded-lg hover:bg-soichu-700 transition duration-200 font-light"
               >
@@ -325,18 +323,24 @@ const Rituals = ({ setCurrentPage }: RitualsProps) => {
           Ready for Your Sacred Journey?
         </h2>
         <p className="text-lg text-gray-500 font-light mb-8 max-w-2xl mx-auto">
-          Each ritual is crafted to meet you where you are, offering guidance and transformation 
+          Each ritual is crafted to meet you where you are, offering guidance and transformation
           through the sacred arts of divination, nature connection, and creative expression.
         </p>
         <div className="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-4">
-          <button 
-            onClick={() => setCurrentPage('contact')}
+          <button
+            onClick={() => {
+              window.scrollTo({ top: 0, behavior: 'smooth' })
+              setCurrentPage('contact')
+            }}
             className="px-8 py-3 bg-soichu-600 text-white rounded-lg hover:bg-soichu-700 transition duration-200 font-light"
           >
             Schedule Consultation
           </button>
-          <button 
-            onClick={() => setCurrentPage('meditations')}
+          <button
+            onClick={() => {
+              window.scrollTo({ top: 0, behavior: 'smooth' })
+              setCurrentPage('meditations')
+            }}
             className="px-8 py-3 text-gray-500 hover:text-gray-600 transition duration-200 font-light"
           >
             Explore Meditations →

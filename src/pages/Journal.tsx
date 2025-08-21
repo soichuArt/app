@@ -80,7 +80,7 @@ const Community = ({ setCurrentPage }: CommunityProps) => {
 
   const handleSubmitPost = async (e: React.FormEvent) => {
     e.preventDefault();
-    
+
     if (!user || !newPost.content.trim()) return;
 
     try {
@@ -177,12 +177,12 @@ const Community = ({ setCurrentPage }: CommunityProps) => {
           <PenTool className="h-16 w-16 text-soichu-500" />
         </div>
         <h1 className="text-4xl md:text-5xl font-geomanist font-ultralight text-gray-500 mb-4 tracking-wide geomanist-ultra-thin">
-        Welcome to Soichu Pueblo* 
+          Welcome to Soichu Pueblo*
         </h1>
         <p className="text-lg text-gray-500 font-light max-w-3xl mx-auto leading-relaxed">
-      A safe place to be yourself. <br/ >Pueblo — a country town, a gentle place where everyone knows each other, 
-          protects each other, and accepts each other. That’s the spirit I’m weaving into this space: a virtual Pueblo where you can simply arrive, as you are. <br/ >Soichu Pueblo is a community of presence, creativity, and care. Rooted in truth, blossoming through connection. <br/ >This is just the beginning — the heart of Soichu, now finding its first home. Feel free to share your life, your needs, your thoughts — whatever moves you. 
-          <br/ >Thank you for being here. <br/ >Bienvenid@s. Let’s grow together.
+          A safe place to be yourself. <br />Pueblo — a country town, a gentle place where everyone knows each other,
+          protects each other, and accepts each other. That’s the spirit I’m weaving into this space: a virtual Pueblo where you can simply arrive, as you are. <br />Soichu Pueblo is a community of presence, creativity, and care. Rooted in truth, blossoming through connection. <br />This is just the beginning — the heart of Soichu, now finding its first home. Feel free to share your life, your needs, your thoughts — whatever moves you.
+          <br />Thank you for being here. <br />Bienvenid@s. Let’s grow together.
         </p>
       </div>
 
@@ -199,10 +199,10 @@ const Community = ({ setCurrentPage }: CommunityProps) => {
               className="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-soichu-500 font-light"
             />
           </div>
-          
+
           {user ? (
             <div className="flex items-center space-x-4">
-              <button 
+              <button
                 onClick={() => setShowNewPostForm(!showNewPostForm)}
                 className="flex items-center space-x-2 px-6 py-3 bg-soichu-600 text-white rounded-lg hover:bg-soichu-700 transition duration-200 font-light"
               >
@@ -219,11 +219,11 @@ const Community = ({ setCurrentPage }: CommunityProps) => {
             </div>
           ) : (
             <button
-              onClick={() => setShowAuthModal(true)}
+              //onClick={() => setShowAuthModal(true)}
               className="flex items-center space-x-2 px-6 py-3 bg-soichu-600 text-white rounded-lg hover:bg-soichu-700 transition duration-200 font-light"
             >
               <LogIn className="h-5 w-5" />
-              <span>Join Community</span>
+              <span>Coming Soon</span>
             </button>
           )}
         </div>
@@ -242,7 +242,7 @@ const Community = ({ setCurrentPage }: CommunityProps) => {
                   required
                 />
               </div>
-              
+
               <div className="grid md:grid-cols-2 gap-4">
                 <div>
                   <div className="flex items-center space-x-2 mb-2">
@@ -257,7 +257,7 @@ const Community = ({ setCurrentPage }: CommunityProps) => {
                     className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-soichu-500 font-light"
                   />
                 </div>
-                
+
                 <div>
                   <div className="flex items-center space-x-2 mb-2">
                     <Link className="h-4 w-4 text-gray-500" />
@@ -272,7 +272,7 @@ const Community = ({ setCurrentPage }: CommunityProps) => {
                   />
                 </div>
               </div>
-              
+
               <div>
                 <label className="text-sm font-light text-gray-500 mb-2 block">Tags (comma separated)</label>
                 <input
@@ -283,7 +283,7 @@ const Community = ({ setCurrentPage }: CommunityProps) => {
                   className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-soichu-500 font-light"
                 />
               </div>
-              
+
               <div className="flex items-center justify-between pt-4">
                 <button
                   type="button"
@@ -401,12 +401,12 @@ const Community = ({ setCurrentPage }: CommunityProps) => {
                     <Heart className="h-5 w-5" />
                     <span className="text-sm font-light">{post.likes_count || 0}</span>
                   </button>
-                  
+
                   <button className="flex items-center space-x-2 text-gray-500 hover:text-soichu-600 transition duration-200">
                     <MessageCircle className="h-5 w-5" />
                     <span className="text-sm font-light">{post.comments_count || 0}</span>
                   </button>
-                  
+
                   <button className="flex items-center space-x-2 text-gray-500 hover:text-soichu-600 transition duration-200">
                     <Share2 className="h-5 w-5" />
                     <span className="text-sm font-light">Share</span>
@@ -428,7 +428,7 @@ const Community = ({ setCurrentPage }: CommunityProps) => {
             Our shared space is a sacred place for authentic sharing, mutual support, and spiritual growth.
           </p>
         </div>
-        
+
         <div className="grid md:grid-cols-3 gap-6">
           <div className="text-center">
             <div className="w-12 h-12 bg-soichu-100 rounded-lg flex items-center justify-center mx-auto mb-3">
@@ -441,7 +441,7 @@ const Community = ({ setCurrentPage }: CommunityProps) => {
               Share your authentic experiences with kindness and respect for all spiritual paths.
             </p>
           </div>
-          
+
           <div className="text-center">
             <div className="w-12 h-12 bg-soichu-100 rounded-lg flex items-center justify-center mx-auto mb-3">
               <MessageCircle className="h-6 w-6 text-soichu-600" />
@@ -453,7 +453,7 @@ const Community = ({ setCurrentPage }: CommunityProps) => {
               Offer encouragement, wisdom, and compassionate responses to fellow community members.
             </p>
           </div>
-          
+
           <div className="text-center">
             <div className="w-12 h-12 bg-soichu-100 rounded-lg flex items-center justify-center mx-auto mb-3">
               <BookOpen className="h-6 w-6 text-soichu-600" />
@@ -474,18 +474,24 @@ const Community = ({ setCurrentPage }: CommunityProps) => {
           Ready to deepen your practice with our community?
         </p>
         <div className="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-4">
-          <button 
-            onClick={() => setCurrentPage('rituals')}
+          <button
+            onClick={() => {
+              window.scrollTo({ top: 0, behavior: 'smooth' })
+              setCurrentPage('rituals')
+            }}
             className="px-8 py-3 bg-soichu-600 text-white rounded-lg hover:bg-soichu-700 transition duration-200 font-light"
           >
             Explore Rituals
           </button>
-          <button 
-            onClick={() => setCurrentPage('premium')}
+          {/* <button
+            onClick={() => {
+              window.scrollTo({ top: 0, behavior: 'smooth' })
+              setCurrentPage('premium')
+            }}
             className="px-8 py-3 text-gray-500 hover:text-gray-600 transition duration-200 font-light"
           >
             Join Premium Community →
-          </button>
+          </button> */}
         </div>
       </div>
 
