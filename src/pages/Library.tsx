@@ -93,16 +93,16 @@ const Library = ({ setCurrentPage }: LibraryProps) => {
     //   icon: Video,
     //   downloadCount: 923,
     // },
-    {
-      id: 8,
-      title: 'Daily Ritual Practices',
-      type: 'guides',
-      format: 'PDF',
-      duration: '20 min read',
-      description: 'Simple yet powerful daily practices to maintain spiritual connection and presence.',
-      icon: FileText,
-      downloadCount: 445,
-    },
+    // {
+    //   id: 8,
+    //   title: 'Daily Ritual Practices',
+    //   type: 'guides',
+    //   format: 'PDF',
+    //   duration: '20 min read',
+    //   description: 'Simple yet powerful daily practices to maintain spiritual connection and presence.',
+    //   icon: FileText,
+    //   downloadCount: 0,
+    // },
   ];
 
   const filteredContent = selectedType === 'all' 

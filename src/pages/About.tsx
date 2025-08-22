@@ -30,32 +30,32 @@ const About = ({ setCurrentPage }: AboutProps) => {
             to create rituals and spaces that embody beauty and balance,<br />
             nurturing inner peace and vibrancy.
           </p>
-          
+
           <div className="lg:hidden mb-8">
-            <img 
-  src={`${import.meta.env.BASE_URL}FabianSoichu1.jpg`} 
-  alt="Soichu portrait by Giacomisnki" 
-/>
+            <img
+              src={`${import.meta.env.BASE_URL}FabianSoichu1.jpg`}
+              alt="Soichu portrait by Giacomisnki"
+            />
 
           </div>
 
           <p className="text-lg text-gray-500 font-light leading-relaxed">
-            Throughout my career, I have explored various disciplines such as visual arts, performing arts, 
+            Throughout my career, I have explored various disciplines such as visual arts, performing arts,
             literature and events management, among others, always focused on excellence, pioneering new styles and concepts.
           </p>
-          
+
           <p className="text-lg text-gray-500 font-light leading-relaxed">
-            I am now expanding my work into the subtle realms, weaving together my creative journey with spiritual 
+            I am now expanding my work into the subtle realms, weaving together my creative journey with spiritual
             perception and my deep connection with my Querandíes ancestors.<br />
             <strong>Soichu is my legacy</strong>
           </p>
         </div>
-        
+
         <div className="hidden lg:block">
-           <img 
-  src={`${import.meta.env.BASE_URL}FabianSoichu1.jpg`} 
-  alt="Soichu portrait by Giacomisnki" 
-/>
+          <img
+            src={`${import.meta.env.BASE_URL}FabianSoichu1.jpg`}
+            alt="Soichu portrait by Giacomisnki"
+          />
         </div>
       </div>
 
@@ -72,10 +72,10 @@ const About = ({ setCurrentPage }: AboutProps) => {
 
         <div className="max-w-4xl mx-auto">
           <div className="mb-8">
-                  <img 
-  src={`${import.meta.env.BASE_URL}travel-verb.webp`} 
-  alt="soichu walking barefoot on the beach" 
-/>
+            <img
+              src={`${import.meta.env.BASE_URL}travel-verb.webp`}
+              alt="soichu walking barefoot on the beach"
+            />
 
           </div>
 
@@ -108,41 +108,41 @@ const About = ({ setCurrentPage }: AboutProps) => {
                   I destroyed myself and was reborn a few times.<br />
                   at some point, I began to love myself,<br />to respect that good boy.
                 </p>
-                
+
                 <p className="text-base text-gray-500 font-light leading-relaxed">
                   2. from the dusty vastness of the humid Pampas, to the unmistakable scent of Buenos Aires' subway.<br />
                   the priest school, in between both.
                 </p>
-                
+
                 <p className="text-base text-gray-500 font-light leading-relaxed">
                   3. from fleeting Ibiza to olympic avant-garde,<br />
                   and wandering, absorbed among the medieval alleyways that shaved my mane.
                 </p>
-                
+
                 <p className="text-base text-gray-500 font-light leading-relaxed">
                   4. from the exclusivity of cutting-edge clubs to the success of dawns which were as dark as profitable.
                 </p>
-                
+
                 <p className="text-base text-gray-500 font-light leading-relaxed">
                   5. the Andalucian warmth, the door open,<br />
                   the cluttered dining room. the continuous long nights again<br />
                   darkening my suns.
                 </p>
-                
+
                 <p className="text-base text-gray-500 font-light leading-relaxed">
                   6. my rescuer, my first love:<br />
                   the stage, dancing and the spins from here to there.<br />
                   kilometres travelled, theatre seats, vast success and failure.<br />
                   reached the highest the star from where I plummeted
                 </p>
-                
+
                 <p className="text-base text-gray-500 font-light leading-relaxed">
                   7. meditating five hours a day in the south of Bangkok.<br />
                   setting new objectives and finding life purpose.<br />
                   next, a trivial comment in the Cameron Highlands<br />
                   that transformed my journey.
                 </p>
-                
+
                 <p className="text-base text-gray-500 font-light leading-relaxed">
                   8. the antipodes. wild and free nakedness.<br />
                   water in all its versions.<br />
@@ -150,7 +150,7 @@ const About = ({ setCurrentPage }: AboutProps) => {
                   Arakwal country first, then Boonwurrung country.<br />
                   after the bark bearing the Pure Spiritual Shapes.
                 </p>
-                
+
                 <h3 className="text-xl font-geomanist font-ultralight text-gray-500 geomanist-ultra-thin">
                   And then SOICHU
                 </h3>
@@ -201,7 +201,7 @@ const About = ({ setCurrentPage }: AboutProps) => {
 
       {/* Call to Action */}
       <div className="text-center mt-16">
-        <button 
+        <button
           onClick={() => setCurrentPage('experiences')}
           className="px-8 py-3 bg-soichu-600 text-white rounded-lg hover:bg-soichu-700 transition duration-200 font-light"
         >
