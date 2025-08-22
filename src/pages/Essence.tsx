@@ -1,4 +1,3 @@
-import React from 'react';
 import { Heart, Target, Compass, ArrowRight } from 'lucide-react';
 
 const Essence = () => {
@@ -21,7 +20,7 @@ const Essence = () => {
       <div className="mb-16">
         <div className="relative overflow-hidden rounded-lg">
           <img 
-            src="/essence4.jpg" 
+            src={`${import.meta.env.BASE_URL}/essence2.jpg`}
             alt="Soichu Essence" 
             className="w-full h-64 md:h-96 object-cover"
           />

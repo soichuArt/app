@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import emailjs from '@emailjs/browser';
 import { MessageCircle, Mail, Instagram, ExternalLink, MapPin, Phone } from 'lucide-react';
 
 interface ContactProps {
@@ -24,33 +23,9 @@ const Contact = ({ setCurrentPage }: ContactProps) => {
     }));
   };
 
-  const serviceId = import.meta.env.VITE_EMAIL_SERVICE_ID;
-  const templateId = import.meta.env.VITE_EMAIL_TEMPLATE_ID;
-  const userId = import.meta.env.VITE_EMAIL_USER_ID;
-
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    emailjs.send(
-      serviceId,
-      templateId,
-      formData,
-      userId
-    )
-      .then((result) => {
-        alert('Mensaje enviado correctamente');
-        setFormData({
-          name: '',
-          email: '',
-          phone: '',
-          subject: '',
-          message: '',
-          interest: 'general',
-        });
-        console.log('Form submitted:', formData);
-      }, (error) => {
-        alert('Error al enviar el mensaje');
-        console.error(error.text);
-      });
+    console.log(formData);
   };
 
   return (

@@ -1,6 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+/* ...otros estilos y directivas de Tailwind... */
 
 /* Global font size adjustments for better readability */
 @layer base {

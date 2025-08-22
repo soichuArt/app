@@ -172,6 +172,14 @@ const Experiences = ({ setCurrentPage }: ExperiencesProps) => {
             <li>~ Workshop <strong>Create Your Own Pure Spiritual Shape</strong> - a creative process where participants
               design their own spiritual bark artwork</li>
           </ul>
+          <button 
+           onClick={() => {
+            window.scrollTo({ top: 0, behavior: 'smooth' })
+            setCurrentPage('contact')
+          }}
+          className="px-8 py-3 bg-soichu-600 text-white rounded-lg hover:bg-soichu-700 transition duration-200 font-light">
+            Explore Formats & Availability
+          </button>
         </div>
       </div>
 
