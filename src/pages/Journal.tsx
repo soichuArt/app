@@ -223,7 +223,7 @@ const Community = ({ setCurrentPage }: CommunityProps) => {
               className="flex items-center space-x-2 px-6 py-3 bg-soichu-600 text-white rounded-lg hover:bg-soichu-700 transition duration-200 font-light"
             >
               <LogIn className="h-5 w-5" />
-              <span>Coming Soon</span>
+              <span>Join Community</span>
             </button>
           )}
         </div>
