@@ -55,10 +55,11 @@ const resources = [
     title: 'Habit Tracker',
     description: 'Printable & digital templates for growth.',
     icon: Sparkles,
-    onClick: setCurrentPage => {
-      window.scrollTo({ top: 0, behavior: 'smooth' })
-      setCurrentPage('library')
-    },
+    onClick: () =>
+      window.open(
+        'https://marble-trampoline-732.notion.site/Personal-Habit-Tracker-Soichu-2574d86f03c1805885abc1c5e046efff?source=copy_link',
+        '_blank'
+      ),
     cta: 'Download',
   },
 ];

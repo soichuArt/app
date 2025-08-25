@@ -35,29 +35,44 @@ const AuthModal = ({ isOpen, onClose, mode, onModeChange }: AuthModalProps) => {
         if (signUpError) throw signUpError;
 
         // Create user profile
-        if (data.user) {
-          const { error: profileError } = await supabase
-            .from('profiles')
-            .insert({
-              id: data.user.id,
-              display_name: formData.displayName,
-              location: formData.location,
-            });
+        // if (data.user) {
+        //   const { error: profileError } = await supabase
+        //     .from('profiles')
+        //     .insert({
+        //       id: data.user.id,
+        //       display_name: formData.displayName,
+        //       location: formData.location,
+        //     });
 
-          if (profileError) throw profileError;
-        }
+        //   if (profileError) throw profileError;
+        // }  
 
         alert('Check your email for the confirmation link!');
       } else {
         // Sign in existing user
-        const { error: signInError } = await supabase.auth.signInWithPassword({
+        const { data, error: signInError } = await supabase.auth.signInWithPassword({
           email: formData.email,
           password: formData.password,
         });
 
         if (signInError) throw signInError;
-      }
 
+        const { data: existingProfile, error: fetchError } = await supabase
+          .from('profiles')
+          .select('*')
+          .eq('id', data.user.id)
+          .single();
+
+        if (fetchError && fetchError.code !== 'PGRST116') throw fetchError; // si es "row not found" no pasa nada
+
+        if (!existingProfile) {
+          await supabase.from('profiles').insert({
+            id: data.user.id,
+            display_name: formData.displayName,
+            location: formData.location,
+          });
+        }
+      }
       onClose();
     } catch (error: any) {
       setError(error.message);

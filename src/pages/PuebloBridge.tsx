@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { supabase } from '../lib/supabaseClient'; // Ajusta la ruta si tu archivo es distinto
+import { supabase } from '../lib/supabase'; // Ajusta la ruta si tu archivo es distinto
 
 const PuebloBridge = () => {
   const [showForm, setShowForm] = useState(false);
@@ -13,9 +13,9 @@ const PuebloBridge = () => {
     e.preventDefault();
     setLoading(true);
     setError('');
-    const { error } = await supabase
-      .from('pueblo_keys')
-      .insert([{ name, email }]);
+
+    const { error } = await supabase.from('pueblo_keys').insert([{ name, email }]);
+    
     setLoading(false);
     if (error) {
       setError('Something went wrong. Please try again.');
