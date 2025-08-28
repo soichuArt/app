@@ -18,10 +18,6 @@ const AuthModal = ({ isOpen, onClose, mode, onModeChange }: AuthModalProps) => {
     location: ''
   });
   const [error, setError] = useState('');
-  const redirectUrl =
-    import.meta.env.MODE === "development"
-      ? "http://localhost:5173/auth/callback"
-      : "https://soichuart.github.io/app/auth/callback";
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -34,9 +30,6 @@ const AuthModal = ({ isOpen, onClose, mode, onModeChange }: AuthModalProps) => {
         const { data, error: signUpError } = await supabase.auth.signUp({
           email: formData.email,
           password: formData.password,
-          options: {
-            emailRedirectTo: redirectUrl
-          }
         });
 
         if (signUpError) throw signUpError;
