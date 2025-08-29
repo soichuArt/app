@@ -69,7 +69,7 @@ const resources = [
     description: 'Printable & digital templates for growth.',
     icon: Sparkles,
     onClick: () => window.open(
-      'https://marble-trampoline-732.notion.site/Personal-Habit-Tracker-Soichu-2574d86f03c1805885abc1c5e046efff?source=copy_link',
+'https://marble-trampoline-732.notion.site/25e4d86f03c180ec91cafd9f643dd7e4?v=25e4d86f03c18149bee0000c9b403016&pvs=73',
       '_blank'
     ),
     cta: 'Download',
