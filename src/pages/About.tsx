@@ -202,7 +202,10 @@ const About = ({ setCurrentPage }: AboutProps) => {
       {/* Call to Action */}
       <div className="text-center mt-16">
         <button
-          onClick={() => setCurrentPage('experiences')}
+          onClick={() => {
+            window.scrollTo({ top: 0, behavior: 'smooth' })
+            setCurrentPage('experiences')
+          }}
           className="px-8 py-3 bg-soichu-600 text-white rounded-lg hover:bg-soichu-700 transition duration-200 font-light"
         >
           Explore My Work →

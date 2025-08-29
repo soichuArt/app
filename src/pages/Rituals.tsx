@@ -83,7 +83,7 @@ const Rituals = ({ setCurrentPage }: RitualsProps) => {
     if (ritual.squareLink) {
       window.open(ritual.squareLink, '_blank');
     } else {
-      // Redirect to contact for custom experiences
+      window.scrollTo({ top: 0, behavior: 'smooth' })
       setCurrentPage('contact');
     }
   };
@@ -307,7 +307,10 @@ const Rituals = ({ setCurrentPage }: RitualsProps) => {
             </ul>
             <div className="mt-6">
               <button
-                onClick={() => setCurrentPage('shop')}
+                onClick={() => {
+                  window.scrollTo({ top: 0, behavior: 'smooth' })
+                  setCurrentPage('shop')
+                }}
                 className="px-6 py-3 bg-soichu-600 text-white rounded-lg hover:bg-soichu-700 transition duration-200 font-light"
               >
                 Get Your Talisman

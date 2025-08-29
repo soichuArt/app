@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { MessageCircle, Mail, Instagram, ExternalLink, MapPin, Phone } from 'lucide-react';
+import { supabase } from '../lib/supabase';
 
 interface ContactProps {
   setCurrentPage: (page: string) => void;
@@ -10,7 +11,6 @@ const Contact = ({ setCurrentPage }: ContactProps) => {
     name: '',
     email: '',
     phone: '',
-    subject: '',
     message: '',
     interest: 'general',
   });
@@ -23,9 +23,31 @@ const Contact = ({ setCurrentPage }: ContactProps) => {
     }));
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    console.log(formData);
+    try {
+      const { error } = await supabase.from('contact_messages').insert({
+        name: formData.name,
+        email: formData.email,
+        phone: formData.phone,
+        message: formData.message,
+        interest: formData.interest,
+      });
+
+      if (error) throw error;
+
+      alert('Thank you! Your message has been sent.');
+      setFormData({
+        name: '',
+        email: '',
+        phone: '',
+        message: '',
+        interest: 'general',
+      });
+    } catch (err: any) {
+      console.error(err);
+      alert('Oops! Something went wrong. Please try again.');
+    }
   };
 
   return (
@@ -266,7 +288,7 @@ const Contact = ({ setCurrentPage }: ContactProps) => {
           </div>
 
           {/* Newsletter Signup */}
-          <div className="bg-gradient-to-r from-soichu-50 to-cream-50 rounded-lg p-8">
+          {/* <div className="bg-gradient-to-r from-soichu-50 to-cream-50 rounded-lg p-8">
             <h3 className="text-xl font-geomanist font-ultralight text-gray-500 mb-4 geomanist-ultra-thin">
               Stay Connected
             </h3>
@@ -285,7 +307,7 @@ const Contact = ({ setCurrentPage }: ContactProps) => {
                 Subscribe
               </button>
             </div>
-          </div>
+          </div> */}
         </div>
       </div>
 

@@ -68,7 +68,10 @@ const resources = [
     title: 'Habit Tracker',
     description: 'Printable & digital templates for growth.',
     icon: Sparkles,
-    onClick: undefined,
+    onClick: () => window.open(
+      'https://marble-trampoline-732.notion.site/Personal-Habit-Tracker-Soichu-2574d86f03c1805885abc1c5e046efff?source=copy_link',
+      '_blank'
+    ),
     cta: 'Download',
   },
   {
@@ -87,7 +90,7 @@ interface ResourcesProps {
   setCurrentPage: (page: string) => void;
 }
 
-const Resources = ({ setCurrentPage }: ResourcesProps) =>  (
+const Resources = ({ setCurrentPage }: ResourcesProps) => (
   <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 font-geomanist text-gray-500">
     {/* Banner igual que en la Home */}
     <div className="text-center mb-16 relative">
