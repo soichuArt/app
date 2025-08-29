@@ -72,7 +72,7 @@ const resources = [
 'https://marble-trampoline-732.notion.site/25e4d86f03c180ec91cafd9f643dd7e4?v=25e4d86f03c18149bee0000c9b403016&pvs=73',
       '_blank'
     ),
-    cta: 'Download',
+    cta: 'Access',
   },
   {
     title: 'Upcoming Events',
