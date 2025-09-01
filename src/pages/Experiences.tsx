@@ -53,7 +53,7 @@ const Experiences = ({ setCurrentPage }: ExperiencesProps) => {
             setCurrentPage('contact')
           }}
           className="px-8 py-3 bg-soichu-600 text-white rounded-lg hover:bg-soichu-700 transition duration-200 font-light">
-            Explore Formats & Availability
+            More info about options here.
           </button>
         </div>
         <div className="text-center">
@@ -106,7 +106,7 @@ const Experiences = ({ setCurrentPage }: ExperiencesProps) => {
             onClick={() => window.open('https://www.soichu.com/expo.php', '_blank')}
             className="px-8 py-3 bg-soichu-600 text-white rounded-lg hover:bg-soichu-700 transition duration-200 font-light"
           >
-            Purchase Gates Experience
+            Query about options & availability.
           </button>
         </div>
       </div>
