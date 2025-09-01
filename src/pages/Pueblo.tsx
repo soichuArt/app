@@ -8,7 +8,7 @@ const Pueblo = () => {
         <p className="text-lg text-gray-700 mb-8">
           This is where the gathering happens.<br />
           Connect, share, and be present with fellow seekers.<br />
-          Thank you for honoring the rhythm of this space.
+          Thank you for honouring the rhythm of this space.
         </p>
         {/* Aquí puedes renderizar los componentes de la comunidad, como hilos, posts, etc. */}
       </div>
