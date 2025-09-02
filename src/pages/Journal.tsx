@@ -182,7 +182,7 @@ const Community = ({ setCurrentPage }: CommunityProps) => {
         <p className="text-lg text-gray-500 font-light max-w-3xl mx-auto leading-relaxed">
           A safe place to be yourself. <br />Pueblo — a country town, a gentle place where everyone knows each other,
           protects each other, and accepts each other. <br />That’s the spirit I’m weaving into this space: a virtual Pueblo where you can simply arrive, as you are.
- <br />Soichu Pueblo is a community of presence, creativity, and care.<br />Rooted in truth, blossoming through connection. <br />This is just the beginning — the heart of Soichu, now finding its first home. </br>Feel free to share your life, your needs, your thoughts — whatever moves you.
+ <br />Soichu Pueblo is a community of presence, creativity, and care.<br />Rooted in truth, blossoming through connection. <br />This is just the beginning — the heart of Soichu, now finding its first home. <br />Feel free to share your life, your needs, your thoughts — whatever moves you.
           <br />Thank you for being here. <br />Bienvenidxs. Let’s grow together.</p>
       </div>
 
